@@ -1,0 +1,365 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<logical-query>
+  <selects>
+    <field>[CALL_CENTER_REGION]</field>
+    <field>[CUSTOMER_STATE]</field>
+    <field>[sum:Gross Profit:ok]</field>
+  </selects>
+  <aggregateOp class="logical-operator">
+    <measures>
+      <binding name="[sum:Gross Profit:ok]">
+        <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+          <identifierExp class="logical-expression" identifier="[GROSS_PROFIT]" />
+        </funcallExp>
+      </binding>
+    </measures>
+    <groupbys>
+      <binding name="[CALL_CENTER_REGION]">
+        <identifierExp class="logical-expression" identifier="[CALL_CENTER_REGION]" />
+      </binding>
+      <binding name="[CUSTOMER_STATE]">
+        <identifierExp class="logical-expression" identifier="[CUSTOMER_STATE]" />
+      </binding>
+    </groupbys>
+    <selectOp class="logical-operator">
+      <predicate>
+        <funcallExp class="logical-expression" function="==" shape="scalar">
+          <identifierExp class="logical-expression" identifier="[Age (group)]" />
+          <literalExp class="logical-expression" datatype="real" value="121.0" />
+        </funcallExp>
+      </predicate>
+      <projectOp class="logical-operator">
+        <expressions>
+          <binding name="[Age (group)]">
+            <caseExp class="logical-expression">
+              <funcallExp class="logical-expression" function="FLOAT" shape="scalar">
+                <funcallExp class="logical-expression" function="-" shape="scalar">
+                  <identifierExp class="logical-expression" identifier="[RECEIVED_DATE_]" />
+                  <identifierExp class="logical-expression" identifier="[ORDER_DATE_]" />
+                </funcallExp>
+              </funcallExp>
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="2.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="3.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="4.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="5.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="6.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="7.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="8.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="9.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="10.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="11.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="12.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="13.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="14.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="15.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="16.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="17.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="18.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="19.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="21.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="22.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="23.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="24.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="25.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="26.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="27.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="28.0" />
+              <literalExp class="logical-expression" datatype="real" value="1.0" />
+              <literalExp class="logical-expression" datatype="real" value="82.0" />
+              <literalExp class="logical-expression" datatype="real" value="82.0" />
+              <literalExp class="logical-expression" datatype="real" value="85.0" />
+              <literalExp class="logical-expression" datatype="real" value="82.0" />
+              <literalExp class="logical-expression" datatype="real" value="86.0" />
+              <literalExp class="logical-expression" datatype="real" value="82.0" />
+              <literalExp class="logical-expression" datatype="real" value="88.0" />
+              <literalExp class="logical-expression" datatype="real" value="82.0" />
+              <literalExp class="logical-expression" datatype="real" value="89.0" />
+              <literalExp class="logical-expression" datatype="real" value="82.0" />
+              <literalExp class="logical-expression" datatype="real" value="90.0" />
+              <literalExp class="logical-expression" datatype="real" value="82.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="92.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="93.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="94.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="95.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="96.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="97.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="99.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="100.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="102.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="103.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="105.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="106.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="109.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="110.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="111.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="112.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="113.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="114.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="115.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="116.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="117.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="118.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="119.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="120.0" />
+              <literalExp class="logical-expression" datatype="real" value="91.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="122.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="123.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="124.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="125.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="126.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="127.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="128.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="129.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="130.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="131.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="132.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="133.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="134.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="135.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="137.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="138.0" />
+              <literalExp class="logical-expression" datatype="real" value="121.0" />
+              <literalExp class="logical-expression" datatype="real" value="-1.0" />
+            </caseExp>
+          </binding>
+          <binding name="[CALL_CENTER_REGION]">
+            <identifierExp class="logical-expression" identifier="[CALL_CENTER_REGION]" />
+          </binding>
+          <binding name="[CUSTOMER_STATE]">
+            <identifierExp class="logical-expression" identifier="[CUSTOMER_STATE]" />
+          </binding>
+        </expressions>
+        <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+          <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+          <cols>
+          </cols>
+          <type>
+            <schema>
+              <field name="[CALL_CENTER_REGION]">
+                <type name="nonnull" />
+              </field>
+              <field name="[CUSTOMER_BALANCE]">
+                <type name="nonnull" />
+              </field>
+              <field name="[CUSTOMER_NAME]">
+                <type name="nonnull" />
+              </field>
+              <field name="[CUSTOMER_SEGMENT]">
+                <type name="nonnull" />
+              </field>
+              <field name="[CUSTOMER_STATE]">
+                <type name="nonnull" />
+              </field>
+              <field name="[DISCOUNT]">
+                <type name="nonnull" />
+              </field>
+              <field name="[EMPLOYEE_DEPT]">
+                <type name="nonnull" />
+              </field>
+              <field name="[EMPLOYEE_NAME]">
+                <type name="nonnull" />
+              </field>
+              <field name="[EMPLOYEE_SALARY]">
+                <type name="nonnull" />
+              </field>
+              <field name="[EMPLOYEE_YRS_EXP]">
+                <type name="nonnull" />
+              </field>
+              <field name="[FILL_TIME]">
+                <type name="nonnull" />
+              </field>
+              <field name="[GROSS_PROFIT]">
+                <type name="nonnull" />
+              </field>
+              <field name="[ITEM_COUNT]">
+                <type name="nonnull" />
+              </field>
+              <field name="[MANAGER_NAME]">
+                <type name="nonnull" />
+              </field>
+              <field name="[MARKET_SEGMENT]">
+                <type name="nonnull" />
+              </field>
+              <field name="[ORDER_DATE_]">
+                <type name="nonnull" />
+              </field>
+              <field name="[ORDER_DAY]">
+                <type name="nonnull" />
+              </field>
+              <field name="[ORDER_ID]">
+                <type name="nonnull" />
+              </field>
+              <field name="[ORDER_MONTH]">
+                <type name="nonnull" />
+              </field>
+              <field name="[ORDER_PRIORITY]">
+                <type name="nonnull" />
+              </field>
+              <field name="[ORDER_QUANTITY]">
+                <type name="nonnull" />
+              </field>
+              <field name="[ORDER_QUARTER]">
+                <type name="nonnull" />
+              </field>
+              <field name="[ORDER_STATUS]">
+                <type name="nonnull" />
+              </field>
+              <field name="[ORDER_YEAR]">
+                <type name="nonnull" />
+              </field>
+              <field name="[PID]">
+                <type name="nonnull" />
+              </field>
+              <field name="[PRICE]">
+                <type name="nonnull" />
+              </field>
+              <field name="[PROD_TYPE1]">
+                <type name="nonnull" />
+              </field>
+              <field name="[PROD_TYPE2]">
+                <type name="nonnull" />
+              </field>
+              <field name="[PROD_TYPE3]">
+                <type name="nonnull" />
+              </field>
+              <field name="[PROD_TYPE4]">
+                <type name="nonnull" />
+              </field>
+              <field name="[PRODUCT_BASE_MARGIN]">
+                <type name="nonnull" />
+              </field>
+              <field name="[PRODUCT_CONTAINER]">
+                <type name="nonnull" />
+              </field>
+              <field name="[PRODUCT_ID]">
+                <type name="nonnull" />
+              </field>
+              <field name="[PRODUCT_IN_STOCK]">
+                <type name="nonnull" />
+              </field>
+              <field name="[PRODUCT_NAME]">
+                <type name="nonnull" />
+              </field>
+              <field name="[RECEIVE_TIME]">
+                <type name="nonnull" />
+              </field>
+              <field name="[RECEIVED_DATE_]">
+                <type name="nonnull" />
+              </field>
+              <field name="[SALES_TOTAL]">
+                <type name="nonnull" />
+              </field>
+              <field name="[SHIP_CHARGE]">
+                <type name="nonnull" />
+              </field>
+              <field name="[SHIP_DATE_]">
+                <type name="nonnull" />
+              </field>
+              <field name="[SHIP_HANDLE_COST]">
+                <type name="nonnull" />
+              </field>
+              <field name="[SHIP_MODE]">
+                <type name="nonnull" />
+              </field>
+              <field name="[SHIP_PRIORITY]">
+                <type name="nonnull" />
+              </field>
+              <field name="[SHIP_PROMO]">
+                <type name="nonnull" />
+              </field>
+              <field name="[SUPPLIER_BALANCE]">
+                <type name="nonnull" />
+              </field>
+              <field name="[SUPPLIER_NAME]">
+                <type name="nonnull" />
+              </field>
+              <field name="[SUPPLIER_REGION]">
+                <type name="nonnull" />
+              </field>
+              <field name="[SUPPLIER_STATE]">
+                <type name="nonnull" />
+              </field>
+              <field name="[TAX_RATE]">
+                <type name="nonnull" />
+              </field>
+              <field name="[TOTAL_CYCLE_TIME]">
+                <type name="nonnull" />
+              </field>
+            </schema>
+            <schema>
+            </schema>
+          </type>
+        </relationOp>
+      </projectOp>
+    </selectOp>
+  </aggregateOp>
+</logical-query>

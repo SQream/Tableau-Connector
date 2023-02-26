@@ -1,0 +1,21 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: 7oxRFXs3wyZWT1fykmimHV93yU4y5
+ qS/KtSoT+4gnf4=
+SHA-256-Digest-Manifest: Lih6uQ4zl+BeFvr9V2YjhFsbNOoJqtqm5ELdD0U7JDU=
+Created-By: 1.8.0_231 (Oracle Corporation)
+
+Name: connectionBuilder.js
+SHA-256-Digest: d7X5NzsMp4QsFc0SMIR8J57rqXmy55pEmKdiLKI2F3I=
+
+Name: manifest.xml
+SHA-256-Digest: Lnedf2Z8qMKVyU2/Ca+xDSX50pyB75ffN63zajJyOMs=
+
+Name: connection-dialog.tcd
+SHA-256-Digest: a/vvHU/yuyeYMZNYw2uhLS9Z1P25zQkG5WQMooOoo5E=
+
+Name: dialect.tdd
+SHA-256-Digest: X0dxrfYRKxWU1ANijQgV2o0oBHw++mrC3fPyRpX2fPw=
+
+Name: connectionResolver.tdr
+SHA-256-Digest: oya3gVoHuwpV250YJTfhFhPl9tdMve7+dKxr5vN6KtA=
+

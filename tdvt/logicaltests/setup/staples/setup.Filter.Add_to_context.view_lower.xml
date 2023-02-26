@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<logical-query>
+  <selects>
+    <field>[market_segment]</field>
+    <field>[prod_type1]</field>
+    <field>[prod_type2]</field>
+    <field>[prod_type3]</field>
+    <field>[prod_type4]</field>
+    <field>[sum:Gross Profit:ok]</field>
+    <field>[sum:Sales Total:ok]</field>
+  </selects>
+  <aggregateOp class="logical-operator">
+    <measures>
+      <binding name="[sum:Gross Profit:ok]">
+        <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+          <identifierExp class="logical-expression" identifier="[gross_profit]" />
+        </funcallExp>
+      </binding>
+      <binding name="[sum:Sales Total:ok]">
+        <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+          <identifierExp class="logical-expression" identifier="[sales_total]" />
+        </funcallExp>
+      </binding>
+    </measures>
+    <groupbys>
+      <binding name="[market_segment]">
+        <identifierExp class="logical-expression" identifier="[market_segment]" />
+      </binding>
+      <binding name="[prod_type1]">
+        <identifierExp class="logical-expression" identifier="[prod_type1]" />
+      </binding>
+      <binding name="[prod_type2]">
+        <identifierExp class="logical-expression" identifier="[prod_type2]" />
+      </binding>
+      <binding name="[prod_type3]">
+        <identifierExp class="logical-expression" identifier="[prod_type3]" />
+      </binding>
+      <binding name="[prod_type4]">
+        <identifierExp class="logical-expression" identifier="[prod_type4]" />
+      </binding>
+    </groupbys>
+    <selectOp class="logical-operator">
+      <predicate>
+        <funcallExp class="logical-expression" function="!" shape="scalar">
+          <funcallExp class="logical-expression" function="$SYS_NARY_AND$" shape="scalar">
+            <funcallExp class="logical-expression" function="==" shape="scalar">
+              <identifierExp class="logical-expression" identifier="[market_segment]" />
+              <literalExp charset="0" class="logical-expression" collation="LEN_RUS_S2_VWIN" datatype="string" value="&quot;CORPORATE&quot;" />
+            </funcallExp>
+            <funcallExp class="logical-expression" function="$SYS_NARY_AND$" shape="scalar">
+              <funcallExp class="logical-expression" function="==" shape="scalar">
+                <identifierExp class="logical-expression" identifier="[prod_type1]" />
+                <literalExp charset="0" class="logical-expression" collation="LEN_RUS_S2_VWIN" datatype="string" value="&quot;TECHNOLOGY&quot;" />
+              </funcallExp>
+              <funcallExp class="logical-expression" function="$SYS_NARY_AND$" shape="scalar">
+                <funcallExp class="logical-expression" function="==" shape="scalar">
+                  <identifierExp class="logical-expression" identifier="[prod_type2]" />
+                  <literalExp charset="0" class="logical-expression" collation="LEN_RUS_S2_VWIN" datatype="string" value="&quot;TELEPHONES AND COMMUNICATION&quot;" />
+                </funcallExp>
+                <funcallExp class="logical-expression" function="$SYS_NARY_AND$" shape="scalar">
+                  <funcallExp class="logical-expression" function="==" shape="scalar">
+                    <identifierExp class="logical-expression" identifier="[prod_type3]" />
+                    <literalExp charset="0" class="logical-expression" collation="LEN_RUS_S2_VWIN" datatype="string" value="&quot;WIRELESS AND CELLULAR&quot;" />
+                  </funcallExp>
+                  <funcallExp class="logical-expression" function="==" shape="scalar">
+                    <identifierExp class="logical-expression" identifier="[prod_type4]" />
+                    <literalExp charset="0" class="logical-expression" collation="LEN_RUS_S2_VWIN" datatype="string" value="&quot;NOKIA&quot;" />
+                  </funcallExp>
+                </funcallExp>
+              </funcallExp>
+            </funcallExp>
+          </funcallExp>
+        </funcallExp>
+      </predicate>
+      <projectOp class="logical-operator">
+        <expressions>
+          <binding name="[market_segment]">
+            <identifierExp class="logical-expression" identifier="[market_segment]" />
+          </binding>
+          <binding name="[prod_type1]">
+            <identifierExp class="logical-expression" identifier="[prod_type1]" />
+          </binding>
+          <binding name="[prod_type2]">
+            <identifierExp class="logical-expression" identifier="[prod_type2]" />
+          </binding>
+          <binding name="[prod_type3]">
+            <identifierExp class="logical-expression" identifier="[prod_type3]" />
+          </binding>
+          <binding name="[prod_type4]">
+            <identifierExp class="logical-expression" identifier="[prod_type4]" />
+          </binding>
+        </expressions>
+        <selectOp class="logical-operator">
+          <predicate>
+            <funcallExp class="logical-expression" function="==" shape="scalar">
+              <identifierExp class="logical-expression" identifier="[none:Customer State:nk]" />
+              <literalExp charset="0" class="logical-expression" collation="LEN_RUS_S2_VWIN" datatype="string" value="&quot;ALABAMA&quot;" />
+            </funcallExp>
+          </predicate>
+          <projectOp class="logical-operator">
+            <expressions>
+              <binding name="[none:Customer State:nk]">
+                <identifierExp class="logical-expression" identifier="[customer_state]" />
+              </binding>
+              <binding name="[call_center_region]">
+                <identifierExp class="logical-expression" identifier="[call_center_region]" />
+              </binding>
+              <binding name="[customer_balance]">
+                <identifierExp class="logical-expression" identifier="[customer_balance]" />
+              </binding>
+              <binding name="[customer_name]">
+                <identifierExp class="logical-expression" identifier="[customer_name]" />
+              </binding>
+              <binding name="[customer_segment]">
+                <identifierExp class="logical-expression" identifier="[customer_segment]" />
+              </binding>
+              <binding name="[customer_state]">
+                <identifierExp class="logical-expression" identifier="[customer_state]" />
+              </binding>
+              <binding name="[discount]">
+                <identifierExp class="logical-expression" identifier="[discount]" />
+              </binding>
+              <binding name="[employee_dept]">
+                <identifierExp class="logical-expression" identifier="[employee_dept]" />
+              </binding>
+              <binding name="[employee_name]">
+                <identifierExp class="logical-expression" identifier="[employee_name]" />
+              </binding>
+              <binding name="[employee_salary]">
+                <identifierExp class="logical-expression" identifier="[employee_salary]" />
+              </binding>
+              <binding name="[employee_yrs_exp]">
+                <identifierExp class="logical-expression" identifier="[employee_yrs_exp]" />
+              </binding>
+              <binding name="[fill_time]">
+                <identifierExp class="logical-expression" identifier="[fill_time]" />
+              </binding>
+              <binding name="[gross_profit]">
+                <identifierExp class="logical-expression" identifier="[gross_profit]" />
+              </binding>
+              <binding name="[item_count]">
+                <identifierExp class="logical-expression" identifier="[item_count]" />
+              </binding>
+              <binding name="[manager_name]">
+                <identifierExp class="logical-expression" identifier="[manager_name]" />
+              </binding>
+              <binding name="[market_segment]">
+                <identifierExp class="logical-expression" identifier="[market_segment]" />
+              </binding>
+              <binding name="[order_date]">
+                <identifierExp class="logical-expression" identifier="[order_date]" />
+              </binding>
+              <binding name="[order_day]">
+                <identifierExp class="logical-expression" identifier="[order_day]" />
+              </binding>
+              <binding name="[order_id]">
+                <identifierExp class="logical-expression" identifier="[order_id]" />
+              </binding>
+              <binding name="[order_month]">
+                <identifierExp class="logical-expression" identifier="[order_month]" />
+              </binding>
+              <binding name="[order_priority]">
+                <identifierExp class="logical-expression" identifier="[order_priority]" />
+              </binding>
+              <binding name="[order_quantity]">
+                <identifierExp class="logical-expression" identifier="[order_quantity]" />
+              </binding>
+              <binding name="[order_quarter]">
+                <identifierExp class="logical-expression" identifier="[order_quarter]" />
+              </binding>
+              <binding name="[order_status]">
+                <identifierExp class="logical-expression" identifier="[order_status]" />
+              </binding>
+              <binding name="[order_year]">
+                <identifierExp class="logical-expression" identifier="[order_year]" />
+              </binding>
+              <binding name="[pid]">
+                <identifierExp class="logical-expression" identifier="[pid]" />
+              </binding>
+              <binding name="[price]">
+                <identifierExp class="logical-expression" identifier="[price]" />
+              </binding>
+              <binding name="[prod_type1]">
+                <identifierExp class="logical-expression" identifier="[prod_type1]" />
+              </binding>
+              <binding name="[prod_type2]">
+                <identifierExp class="logical-expression" identifier="[prod_type2]" />
+              </binding>
+              <binding name="[prod_type3]">
+                <identifierExp class="logical-expression" identifier="[prod_type3]" />
+              </binding>
+              <binding name="[prod_type4]">
+                <identifierExp class="logical-expression" identifier="[prod_type4]" />
+              </binding>
+              <binding name="[product_base_margin]">
+                <identifierExp class="logical-expression" identifier="[product_base_margin]" />
+              </binding>
+              <binding name="[product_container]">
+                <identifierExp class="logical-expression" identifier="[product_container]" />
+              </binding>
+              <binding name="[product_id]">
+                <identifierExp class="logical-expression" identifier="[product_id]" />
+              </binding>
+              <binding name="[product_in_stock]">
+                <identifierExp class="logical-expression" identifier="[product_in_stock]" />
+              </binding>
+              <binding name="[product_name]">
+                <identifierExp class="logical-expression" identifier="[product_name]" />
+              </binding>
+              <binding name="[receive_time]">
+                <identifierExp class="logical-expression" identifier="[receive_time]" />
+              </binding>
+              <binding name="[received_date]">
+                <identifierExp class="logical-expression" identifier="[received_date]" />
+              </binding>
+              <binding name="[sales_total]">
+                <identifierExp class="logical-expression" identifier="[sales_total]" />
+              </binding>
+              <binding name="[ship_charge]">
+                <identifierExp class="logical-expression" identifier="[ship_charge]" />
+              </binding>
+              <binding name="[ship_date]">
+                <identifierExp class="logical-expression" identifier="[ship_date]" />
+              </binding>
+              <binding name="[ship_handle_cost]">
+                <identifierExp class="logical-expression" identifier="[ship_handle_cost]" />
+              </binding>
+              <binding name="[ship_mode]">
+                <identifierExp class="logical-expression" identifier="[ship_mode]" />
+              </binding>
+              <binding name="[ship_priority]">
+                <identifierExp class="logical-expression" identifier="[ship_priority]" />
+              </binding>
+              <binding name="[ship_promo]">
+                <identifierExp class="logical-expression" identifier="[ship_promo]" />
+              </binding>
+              <binding name="[supplier_balance]">
+                <identifierExp class="logical-expression" identifier="[supplier_balance]" />
+              </binding>
+              <binding name="[supplier_name]">
+                <identifierExp class="logical-expression" identifier="[supplier_name]" />
+              </binding>
+              <binding name="[supplier_region]">
+                <identifierExp class="logical-expression" identifier="[supplier_region]" />
+              </binding>
+              <binding name="[supplier_state]">
+                <identifierExp class="logical-expression" identifier="[supplier_state]" />
+              </binding>
+              <binding name="[tax_rate]">
+                <identifierExp class="logical-expression" identifier="[tax_rate]" />
+              </binding>
+              <binding name="[total_cycle_time]">
+                <identifierExp class="logical-expression" identifier="[total_cycle_time]" />
+              </binding>
+            </expressions>
+            <relationOp class="logical-operator" connection="leaf" name="[testv1].[staples_view]">
+              <relation name="Staples" table="[testv1].[staples_view]" type="table" />
+              <cols>
+              </cols>
+              <type>
+                <schema>
+                  <field name="[call_center_region]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[customer_balance]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[customer_name]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[customer_segment]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[customer_state]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[discount]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[employee_dept]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[employee_name]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[employee_salary]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[employee_yrs_exp]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[fill_time]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[gross_profit]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[item_count]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[manager_name]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[market_segment]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[order_date]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[order_day]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[order_id]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[order_month]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[order_priority]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[order_quantity]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[order_quarter]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[order_status]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[order_year]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[pid]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[price]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[prod_type1]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[prod_type2]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[prod_type3]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[prod_type4]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[product_base_margin]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[product_container]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[product_id]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[product_in_stock]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[product_name]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[receive_time]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[received_date]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[sales_total]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[ship_charge]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[ship_date]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[ship_handle_cost]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[ship_mode]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[ship_priority]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[ship_promo]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[supplier_balance]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[supplier_name]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[supplier_region]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[supplier_state]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[tax_rate]">
+                    <type name="nonnull" />
+                  </field>
+                  <field name="[total_cycle_time]">
+                    <type name="nonnull" />
+                  </field>
+                </schema>
+                <schema>
+                </schema>
+              </type>
+            </relationOp>
+          </projectOp>
+        </selectOp>
+      </projectOp>
+    </selectOp>
+  </aggregateOp>
+</logical-query>

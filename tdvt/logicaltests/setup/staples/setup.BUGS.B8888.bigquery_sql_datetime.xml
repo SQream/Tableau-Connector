@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<logical-query>
+  <selects>
+    <field>[Week #]</field>
+    <field>[ctd:Order Date:ok]</field>
+    <field>[yr:Order Date:ok]</field>
+  </selects>
+  <aggregateOp class="logical-operator">
+    <measures>
+      <binding name="[ctd:Order Date:ok]">
+        <funcallExp class="logical-expression" function="COUNTD" shape="aggregate">
+          <identifierExp class="logical-expression" identifier="[OrderDate]" />
+        </funcallExp>
+      </binding>
+    </measures>
+    <groupbys>
+      <binding name="[Week #]">
+        <identifierExp class="logical-expression" identifier="[Week #]" />
+      </binding>
+      <binding name="[yr:Order Date:ok]">
+        <identifierExp class="logical-expression" identifier="[yr:Order Date:ok]" />
+      </binding>
+    </groupbys>
+    <projectOp class="logical-operator">
+      <expressions>
+        <binding name="[Week #]">
+          <funcallExp class="logical-expression" function="INT" shape="scalar">
+            <funcallExp class="logical-expression" function="/" shape="scalar">
+              <funcallExp class="logical-expression" function="+" shape="scalar">
+                <funcallExp class="logical-expression" function="+" shape="scalar">
+                  <literalExp class="logical-expression" datatype="integer" value="6" />
+                  <funcallExp class="logical-expression" function="DATEPART" shape="scalar">
+                    <literalExp charset="0" class="logical-expression" collation="LROOT" datatype="string" value="&quot;weekday&quot;" />
+                    <funcallExp class="logical-expression" function="DATEADD" shape="scalar">
+                      <literalExp charset="0" class="logical-expression" collation="LROOT" datatype="string" value="&quot;month&quot;" />
+                      <funcallExp class="logical-expression" function="-" shape="scalar">
+                        <literalExp class="logical-expression" datatype="integer" value="2" />
+                        <caseExp class="logical-expression">
+                          <literalExp class="logical-expression" datatype="boolean" value="true" />
+                          <funcallExp class="logical-expression" function="&lt;" shape="scalar">
+                            <funcallExp class="logical-expression" function="DATEPART" shape="scalar">
+                              <literalExp charset="0" class="logical-expression" collation="LROOT" datatype="string" value="&quot;month&quot;" />
+                              <identifierExp class="logical-expression" identifier="[OrderDate]" />
+                            </funcallExp>
+                            <literalExp class="logical-expression" datatype="integer" value="3" />
+                          </funcallExp>
+                          <literalExp class="logical-expression" datatype="integer" value="12" />
+                          <literalExp class="logical-expression" datatype="integer" value="0" />
+                        </caseExp>
+                      </funcallExp>
+                      <funcallExp class="logical-expression" function="DATETRUNC" shape="scalar">
+                        <literalExp charset="0" class="logical-expression" collation="LROOT" datatype="string" value="&quot;year&quot;" />
+                        <identifierExp class="logical-expression" identifier="[OrderDate]" />
+                      </funcallExp>
+                    </funcallExp>
+                  </funcallExp>
+                </funcallExp>
+                <funcallExp class="logical-expression" function="-" shape="scalar">
+                  <identifierExp class="logical-expression" identifier="[OrderDate]" />
+                  <funcallExp class="logical-expression" function="DATEADD" shape="scalar">
+                    <literalExp charset="0" class="logical-expression" collation="LROOT" datatype="string" value="&quot;month&quot;" />
+                    <funcallExp class="logical-expression" function="-" shape="scalar">
+                      <literalExp class="logical-expression" datatype="integer" value="2" />
+                      <caseExp class="logical-expression">
+                        <literalExp class="logical-expression" datatype="boolean" value="true" />
+                        <funcallExp class="logical-expression" function="&lt;" shape="scalar">
+                          <funcallExp class="logical-expression" function="DATEPART" shape="scalar">
+                            <literalExp charset="0" class="logical-expression" collation="LROOT" datatype="string" value="&quot;month&quot;" />
+                            <identifierExp class="logical-expression" identifier="[OrderDate]" />
+                          </funcallExp>
+                          <literalExp class="logical-expression" datatype="integer" value="3" />
+                        </funcallExp>
+                        <literalExp class="logical-expression" datatype="integer" value="12" />
+                        <literalExp class="logical-expression" datatype="integer" value="0" />
+                      </caseExp>
+                    </funcallExp>
+                    <funcallExp class="logical-expression" function="DATETRUNC" shape="scalar">
+                      <literalExp charset="0" class="logical-expression" collation="LROOT" datatype="string" value="&quot;year&quot;" />
+                      <identifierExp class="logical-expression" identifier="[OrderDate]" />
+                    </funcallExp>
+                  </funcallExp>
+                </funcallExp>
+              </funcallExp>
+              <literalExp class="logical-expression" datatype="integer" value="7" />
+            </funcallExp>
+          </funcallExp>
+        </binding>
+        <binding name="[yr:Order Date:ok]">
+          <funcallExp class="logical-expression" function="DATEPART" shape="scalar">
+            <literalExp charset="0" class="logical-expression" collation="LROOT" datatype="string" value="&quot;year&quot;" />
+            <funcallExp class="logical-expression" function="DATEADD" shape="scalar">
+              <literalExp charset="0" class="logical-expression" collation="LROOT" datatype="string" value="&quot;month&quot;" />
+              <literalExp class="logical-expression" datatype="integer" value="10" />
+              <identifierExp class="logical-expression" identifier="[OrderDate]" />
+            </funcallExp>
+          </funcallExp>
+        </binding>
+      </expressions>
+      <relationOp class="logical-operator" connection="leaf" name="[tactile-pulsar-824.TestV1].[StaplesDateTime]">
+        <relation name="Staples" table="[tactile-pulsar-824.TestV1].[StaplesDateTime]" type="table" />
+        <cols>
+        </cols>
+        <type>
+          <schema>
+            <field name="[CallCenterRegion]">
+              <type name="nonnull" />
+            </field>
+            <field name="[CustomerBalance]">
+              <type name="nonnull" />
+            </field>
+            <field name="[CustomerName]">
+              <type name="nonnull" />
+            </field>
+            <field name="[CustomerSegment]">
+              <type name="nonnull" />
+            </field>
+            <field name="[CustomerState]">
+              <type name="nonnull" />
+            </field>
+            <field name="[Discount]">
+              <type name="nonnull" />
+            </field>
+            <field name="[EmployeeDept]">
+              <type name="nonnull" />
+            </field>
+            <field name="[EmployeeName]">
+              <type name="nonnull" />
+            </field>
+            <field name="[EmployeeSalary]">
+              <type name="nonnull" />
+            </field>
+            <field name="[EmployeeYrsExp]">
+              <type name="nonnull" />
+            </field>
+            <field name="[FillTime]">
+              <type name="nonnull" />
+            </field>
+            <field name="[GrossProfit]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ItemCount]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ManagerName]">
+              <type name="nonnull" />
+            </field>
+            <field name="[MarketSegment]">
+              <type name="nonnull" />
+            </field>
+            <field name="[OrderDate]">
+              <type name="nonnull" />
+            </field>
+            <field name="[OrderDay]">
+              <type name="nonnull" />
+            </field>
+            <field name="[OrderID]">
+              <type name="nonnull" />
+            </field>
+            <field name="[OrderMonth]">
+              <type name="nonnull" />
+            </field>
+            <field name="[OrderPriority]">
+              <type name="nonnull" />
+            </field>
+            <field name="[OrderQuantity]">
+              <type name="nonnull" />
+            </field>
+            <field name="[OrderQuarter]">
+              <type name="nonnull" />
+            </field>
+            <field name="[OrderStatus]">
+              <type name="nonnull" />
+            </field>
+            <field name="[OrderYear]">
+              <type name="nonnull" />
+            </field>
+            <field name="[PID]">
+              <type name="nonnull" />
+            </field>
+            <field name="[Price]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ProdType1]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ProdType2]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ProdType3]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ProdType4]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ProductBaseMargin]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ProductContainer]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ProductID]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ProductInStock]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ProductName]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ReceiveTime]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ReceivedDate]">
+              <type name="nonnull" />
+            </field>
+            <field name="[SalesTotal]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ShipCharge]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ShipDate]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ShipHandleCost]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ShipMode]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ShipPriority]">
+              <type name="nonnull" />
+            </field>
+            <field name="[ShipPromo]">
+              <type name="nonnull" />
+            </field>
+            <field name="[SupplierBalance]">
+              <type name="nonnull" />
+            </field>
+            <field name="[SupplierName]">
+              <type name="nonnull" />
+            </field>
+            <field name="[SupplierRegion]">
+              <type name="nonnull" />
+            </field>
+            <field name="[SupplierState]">
+              <type name="nonnull" />
+            </field>
+            <field name="[TaxRate]">
+              <type name="nonnull" />
+            </field>
+            <field name="[TotalCycleTime]">
+              <type name="nonnull" />
+            </field>
+          </schema>
+          <schema>
+          </schema>
+        </type>
+      </relationOp>
+    </projectOp>
+  </aggregateOp>
+</logical-query>

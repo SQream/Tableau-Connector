@@ -1,0 +1,3189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<logical-query>
+  <selects>
+    <field>[prod type1]</field>
+    <field>[ship mode]</field>
+    <field>[TEMP(attr:LOD - Nesting - 1 (copy):qk)(1075333431)(0)]</field>
+    <field>[TEMP(attr:LOD - Nesting - 1 (copy):qk)(260755027)(0)]</field>
+    <field>[avg:Calculation_8601225013155991:ok]</field>
+    <field>[sum:Calculation_9271225012544475:ok]</field>
+    <field>[sum:LOD - Nesting - 2 (copy):ok]</field>
+    <field>[sum:LOD - Nesting - 3 (copy):ok]</field>
+  </selects>
+  <projectOp class="logical-operator">
+    <expressions>
+      <binding name="[TEMP(attr:LOD - Nesting - 1 (copy):qk)(1075333431)(0)]">
+        <lookupExp class="logical-expression" domain="total">
+          <aggregateOp class="logical-operator">
+            <measures>
+              <binding name="[__measure__1]">
+                <funcallExp class="logical-expression" function="AVG" shape="aggregate">
+                  <lookupExp class="logical-expression" domain="total">
+                    <aggregateOp class="logical-operator">
+                      <measures>
+                        <binding name="[__measure__0]">
+                          <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                            <identifierExp class="logical-expression" identifier="[sales total]" />
+                          </funcallExp>
+                        </binding>
+                      </measures>
+                      <groupbys>
+                        <binding name="[prod type1]">
+                          <identifierExp class="logical-expression" identifier="[prod type1]" />
+                        </binding>
+                        <binding name="[ship mode]">
+                          <identifierExp class="logical-expression" identifier="[ship mode]" />
+                        </binding>
+                        <binding name="[prod type3]">
+                          <identifierExp class="logical-expression" identifier="[prod type3]" />
+                        </binding>
+                        <binding name="[prod type2]">
+                          <identifierExp class="logical-expression" identifier="[prod type2]" />
+                        </binding>
+                      </groupbys>
+                      <projectOp class="logical-operator">
+                        <expressions>
+                          <binding name="[prod type1]">
+                            <identifierExp class="logical-expression" identifier="[prod type1]" />
+                          </binding>
+                          <binding name="[ship mode]">
+                            <identifierExp class="logical-expression" identifier="[ship mode]" />
+                          </binding>
+                        </expressions>
+                        <relationOp class="logical-operator" connection="leaf" name="[staples]">
+                          <relation name="Staples" table="[staples]" type="table" />
+                          <cols>
+                          </cols>
+                          <type>
+                            <schema>
+                              <field name="[call center region]">
+                                <type name="top" />
+                              </field>
+                              <field name="[customer balance]">
+                                <type name="top" />
+                              </field>
+                              <field name="[customer name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[customer segment]">
+                                <type name="top" />
+                              </field>
+                              <field name="[customer state]">
+                                <type name="top" />
+                              </field>
+                              <field name="[discount]">
+                                <type name="top" />
+                              </field>
+                              <field name="[employee dept]">
+                                <type name="top" />
+                              </field>
+                              <field name="[employee name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[employee salary]">
+                                <type name="top" />
+                              </field>
+                              <field name="[employee yrs exp]">
+                                <type name="top" />
+                              </field>
+                              <field name="[fill time]">
+                                <type name="top" />
+                              </field>
+                              <field name="[gross profit]">
+                                <type name="top" />
+                              </field>
+                              <field name="[item count]">
+                                <type name="top" />
+                              </field>
+                              <field name="[manager name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[market segment]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order date]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order day]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order id]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order month]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order priority]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order quantity]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order quarter]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order status]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order year]">
+                                <type name="top" />
+                              </field>
+                              <field name="[pid]">
+                                <type name="top" />
+                              </field>
+                              <field name="[price]">
+                                <type name="top" />
+                              </field>
+                              <field name="[prod type1]">
+                                <type name="top" />
+                              </field>
+                              <field name="[prod type2]">
+                                <type name="top" />
+                              </field>
+                              <field name="[prod type3]">
+                                <type name="top" />
+                              </field>
+                              <field name="[prod type4]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product base margin]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product container]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product id]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product in stock]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[receive time]">
+                                <type name="top" />
+                              </field>
+                              <field name="[received date]">
+                                <type name="top" />
+                              </field>
+                              <field name="[sales total]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship charge]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship date]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship handle cost]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship mode]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship priority]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship promo]">
+                                <type name="top" />
+                              </field>
+                              <field name="[supplier balance]">
+                                <type name="top" />
+                              </field>
+                              <field name="[supplier name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[supplier region]">
+                                <type name="top" />
+                              </field>
+                              <field name="[supplier state]">
+                                <type name="top" />
+                              </field>
+                              <field name="[tax rate]">
+                                <type name="top" />
+                              </field>
+                              <field name="[total cycle time]">
+                                <type name="top" />
+                              </field>
+                            </schema>
+                            <schema>
+                            </schema>
+                          </type>
+                        </relationOp>
+                      </projectOp>
+                    </aggregateOp>
+                    <indices>
+                      <identifierExp class="logical-expression" identifier="[prod type1]" />
+                      <identifierExp class="logical-expression" identifier="[ship mode]" />
+                      <identifierExp class="logical-expression" identifier="[prod type3]" />
+                      <identifierExp class="logical-expression" identifier="[prod type2]" />
+                    </indices>
+                    <schema>
+                      <identifierExp class="logical-expression" identifier="[prod type1]" />
+                      <identifierExp class="logical-expression" identifier="[ship mode]" />
+                      <identifierExp class="logical-expression" identifier="[prod type3]" />
+                      <identifierExp class="logical-expression" identifier="[prod type2]" />
+                    </schema>
+                    <output-value>
+                      <identifierExp class="logical-expression" identifier="[__measure__0]" />
+                    </output-value>
+                    <default-value>
+                      <literalExp class="logical-expression" datatype="real" value="%null%" />
+                    </default-value>
+                  </lookupExp>
+                </funcallExp>
+              </binding>
+            </measures>
+            <groupbys>
+              <binding name="[prod type1]">
+                <identifierExp class="logical-expression" identifier="[prod type1]" />
+              </binding>
+              <binding name="[ship mode]">
+                <identifierExp class="logical-expression" identifier="[ship mode]" />
+              </binding>
+            </groupbys>
+            <aggregateOp class="logical-operator">
+              <measures>
+              </measures>
+              <groupbys>
+                <binding name="[prod type1]">
+                  <identifierExp class="logical-expression" identifier="[prod type1]" />
+                </binding>
+                <binding name="[ship mode]">
+                  <identifierExp class="logical-expression" identifier="[ship mode]" />
+                </binding>
+                <binding name="[prod type3]">
+                  <identifierExp class="logical-expression" identifier="[prod type3]" />
+                </binding>
+                <binding name="[prod type2]">
+                  <identifierExp class="logical-expression" identifier="[prod type2]" />
+                </binding>
+              </groupbys>
+              <projectOp class="logical-operator">
+                <expressions>
+                  <binding name="[prod type1]">
+                    <identifierExp class="logical-expression" identifier="[prod type1]" />
+                  </binding>
+                  <binding name="[ship mode]">
+                    <identifierExp class="logical-expression" identifier="[ship mode]" />
+                  </binding>
+                </expressions>
+                <relationOp class="logical-operator" connection="leaf" name="[staples]">
+                  <relation name="Staples" table="[staples]" type="table" />
+                  <cols>
+                  </cols>
+                  <type>
+                    <schema>
+                      <field name="[call center region]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer balance]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer segment]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer state]">
+                        <type name="top" />
+                      </field>
+                      <field name="[discount]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee dept]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee salary]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee yrs exp]">
+                        <type name="top" />
+                      </field>
+                      <field name="[fill time]">
+                        <type name="top" />
+                      </field>
+                      <field name="[gross profit]">
+                        <type name="top" />
+                      </field>
+                      <field name="[item count]">
+                        <type name="top" />
+                      </field>
+                      <field name="[manager name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[market segment]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order day]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order id]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order month]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order priority]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order quantity]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order quarter]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order status]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order year]">
+                        <type name="top" />
+                      </field>
+                      <field name="[pid]">
+                        <type name="top" />
+                      </field>
+                      <field name="[price]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type1]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type2]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type3]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type4]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product base margin]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product container]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product id]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product in stock]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[receive time]">
+                        <type name="top" />
+                      </field>
+                      <field name="[received date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[sales total]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship charge]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship handle cost]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship mode]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship priority]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship promo]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier balance]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier region]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier state]">
+                        <type name="top" />
+                      </field>
+                      <field name="[tax rate]">
+                        <type name="top" />
+                      </field>
+                      <field name="[total cycle time]">
+                        <type name="top" />
+                      </field>
+                    </schema>
+                    <schema>
+                    </schema>
+                  </type>
+                </relationOp>
+              </projectOp>
+            </aggregateOp>
+          </aggregateOp>
+          <indices>
+            <identifierExp class="logical-expression" identifier="[prod type1]" />
+            <identifierExp class="logical-expression" identifier="[ship mode]" />
+          </indices>
+          <schema>
+            <identifierExp class="logical-expression" identifier="[prod type1]" />
+            <identifierExp class="logical-expression" identifier="[ship mode]" />
+          </schema>
+          <output-value>
+            <identifierExp class="logical-expression" identifier="[__measure__1]" />
+          </output-value>
+          <default-value>
+            <literalExp class="logical-expression" datatype="real" value="%null%" />
+          </default-value>
+        </lookupExp>
+      </binding>
+      <binding name="[TEMP(attr:LOD - Nesting - 1 (copy):qk)(260755027)(0)]">
+        <lookupExp class="logical-expression" domain="total">
+          <aggregateOp class="logical-operator">
+            <measures>
+              <binding name="[__measure__3]">
+                <funcallExp class="logical-expression" function="AVG" shape="aggregate">
+                  <lookupExp class="logical-expression" domain="total">
+                    <aggregateOp class="logical-operator">
+                      <measures>
+                        <binding name="[__measure__2]">
+                          <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                            <identifierExp class="logical-expression" identifier="[sales total]" />
+                          </funcallExp>
+                        </binding>
+                      </measures>
+                      <groupbys>
+                        <binding name="[prod type1]">
+                          <identifierExp class="logical-expression" identifier="[prod type1]" />
+                        </binding>
+                        <binding name="[ship mode]">
+                          <identifierExp class="logical-expression" identifier="[ship mode]" />
+                        </binding>
+                        <binding name="[prod type3]">
+                          <identifierExp class="logical-expression" identifier="[prod type3]" />
+                        </binding>
+                        <binding name="[prod type2]">
+                          <identifierExp class="logical-expression" identifier="[prod type2]" />
+                        </binding>
+                      </groupbys>
+                      <projectOp class="logical-operator">
+                        <expressions>
+                          <binding name="[prod type1]">
+                            <identifierExp class="logical-expression" identifier="[prod type1]" />
+                          </binding>
+                          <binding name="[ship mode]">
+                            <identifierExp class="logical-expression" identifier="[ship mode]" />
+                          </binding>
+                        </expressions>
+                        <relationOp class="logical-operator" connection="leaf" name="[staples]">
+                          <relation name="Staples" table="[staples]" type="table" />
+                          <cols>
+                          </cols>
+                          <type>
+                            <schema>
+                              <field name="[call center region]">
+                                <type name="top" />
+                              </field>
+                              <field name="[customer balance]">
+                                <type name="top" />
+                              </field>
+                              <field name="[customer name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[customer segment]">
+                                <type name="top" />
+                              </field>
+                              <field name="[customer state]">
+                                <type name="top" />
+                              </field>
+                              <field name="[discount]">
+                                <type name="top" />
+                              </field>
+                              <field name="[employee dept]">
+                                <type name="top" />
+                              </field>
+                              <field name="[employee name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[employee salary]">
+                                <type name="top" />
+                              </field>
+                              <field name="[employee yrs exp]">
+                                <type name="top" />
+                              </field>
+                              <field name="[fill time]">
+                                <type name="top" />
+                              </field>
+                              <field name="[gross profit]">
+                                <type name="top" />
+                              </field>
+                              <field name="[item count]">
+                                <type name="top" />
+                              </field>
+                              <field name="[manager name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[market segment]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order date]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order day]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order id]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order month]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order priority]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order quantity]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order quarter]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order status]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order year]">
+                                <type name="top" />
+                              </field>
+                              <field name="[pid]">
+                                <type name="top" />
+                              </field>
+                              <field name="[price]">
+                                <type name="top" />
+                              </field>
+                              <field name="[prod type1]">
+                                <type name="top" />
+                              </field>
+                              <field name="[prod type2]">
+                                <type name="top" />
+                              </field>
+                              <field name="[prod type3]">
+                                <type name="top" />
+                              </field>
+                              <field name="[prod type4]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product base margin]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product container]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product id]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product in stock]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[receive time]">
+                                <type name="top" />
+                              </field>
+                              <field name="[received date]">
+                                <type name="top" />
+                              </field>
+                              <field name="[sales total]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship charge]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship date]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship handle cost]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship mode]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship priority]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship promo]">
+                                <type name="top" />
+                              </field>
+                              <field name="[supplier balance]">
+                                <type name="top" />
+                              </field>
+                              <field name="[supplier name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[supplier region]">
+                                <type name="top" />
+                              </field>
+                              <field name="[supplier state]">
+                                <type name="top" />
+                              </field>
+                              <field name="[tax rate]">
+                                <type name="top" />
+                              </field>
+                              <field name="[total cycle time]">
+                                <type name="top" />
+                              </field>
+                            </schema>
+                            <schema>
+                            </schema>
+                          </type>
+                        </relationOp>
+                      </projectOp>
+                    </aggregateOp>
+                    <indices>
+                      <identifierExp class="logical-expression" identifier="[prod type1]" />
+                      <identifierExp class="logical-expression" identifier="[ship mode]" />
+                      <identifierExp class="logical-expression" identifier="[prod type3]" />
+                      <identifierExp class="logical-expression" identifier="[prod type2]" />
+                    </indices>
+                    <schema>
+                      <identifierExp class="logical-expression" identifier="[prod type1]" />
+                      <identifierExp class="logical-expression" identifier="[ship mode]" />
+                      <identifierExp class="logical-expression" identifier="[prod type3]" />
+                      <identifierExp class="logical-expression" identifier="[prod type2]" />
+                    </schema>
+                    <output-value>
+                      <identifierExp class="logical-expression" identifier="[__measure__2]" />
+                    </output-value>
+                    <default-value>
+                      <literalExp class="logical-expression" datatype="real" value="%null%" />
+                    </default-value>
+                  </lookupExp>
+                </funcallExp>
+              </binding>
+            </measures>
+            <groupbys>
+              <binding name="[prod type1]">
+                <identifierExp class="logical-expression" identifier="[prod type1]" />
+              </binding>
+              <binding name="[ship mode]">
+                <identifierExp class="logical-expression" identifier="[ship mode]" />
+              </binding>
+            </groupbys>
+            <aggregateOp class="logical-operator">
+              <measures>
+              </measures>
+              <groupbys>
+                <binding name="[prod type1]">
+                  <identifierExp class="logical-expression" identifier="[prod type1]" />
+                </binding>
+                <binding name="[ship mode]">
+                  <identifierExp class="logical-expression" identifier="[ship mode]" />
+                </binding>
+                <binding name="[prod type3]">
+                  <identifierExp class="logical-expression" identifier="[prod type3]" />
+                </binding>
+                <binding name="[prod type2]">
+                  <identifierExp class="logical-expression" identifier="[prod type2]" />
+                </binding>
+              </groupbys>
+              <projectOp class="logical-operator">
+                <expressions>
+                  <binding name="[prod type1]">
+                    <identifierExp class="logical-expression" identifier="[prod type1]" />
+                  </binding>
+                  <binding name="[ship mode]">
+                    <identifierExp class="logical-expression" identifier="[ship mode]" />
+                  </binding>
+                </expressions>
+                <relationOp class="logical-operator" connection="leaf" name="[staples]">
+                  <relation name="Staples" table="[staples]" type="table" />
+                  <cols>
+                  </cols>
+                  <type>
+                    <schema>
+                      <field name="[call center region]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer balance]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer segment]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer state]">
+                        <type name="top" />
+                      </field>
+                      <field name="[discount]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee dept]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee salary]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee yrs exp]">
+                        <type name="top" />
+                      </field>
+                      <field name="[fill time]">
+                        <type name="top" />
+                      </field>
+                      <field name="[gross profit]">
+                        <type name="top" />
+                      </field>
+                      <field name="[item count]">
+                        <type name="top" />
+                      </field>
+                      <field name="[manager name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[market segment]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order day]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order id]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order month]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order priority]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order quantity]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order quarter]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order status]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order year]">
+                        <type name="top" />
+                      </field>
+                      <field name="[pid]">
+                        <type name="top" />
+                      </field>
+                      <field name="[price]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type1]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type2]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type3]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type4]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product base margin]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product container]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product id]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product in stock]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[receive time]">
+                        <type name="top" />
+                      </field>
+                      <field name="[received date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[sales total]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship charge]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship handle cost]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship mode]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship priority]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship promo]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier balance]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier region]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier state]">
+                        <type name="top" />
+                      </field>
+                      <field name="[tax rate]">
+                        <type name="top" />
+                      </field>
+                      <field name="[total cycle time]">
+                        <type name="top" />
+                      </field>
+                    </schema>
+                    <schema>
+                    </schema>
+                  </type>
+                </relationOp>
+              </projectOp>
+            </aggregateOp>
+          </aggregateOp>
+          <indices>
+            <identifierExp class="logical-expression" identifier="[prod type1]" />
+            <identifierExp class="logical-expression" identifier="[ship mode]" />
+          </indices>
+          <schema>
+            <identifierExp class="logical-expression" identifier="[prod type1]" />
+            <identifierExp class="logical-expression" identifier="[ship mode]" />
+          </schema>
+          <output-value>
+            <identifierExp class="logical-expression" identifier="[__measure__3]" />
+          </output-value>
+          <default-value>
+            <literalExp class="logical-expression" datatype="real" value="%null%" />
+          </default-value>
+        </lookupExp>
+      </binding>
+      <binding name="[sum:Calculation_9271225012544475:ok]">
+        <lookupExp class="logical-expression" domain="total">
+          <aggregateOp class="logical-operator">
+            <measures>
+              <binding name="[__measure__10]">
+                <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                  <funcallExp class="logical-expression" function="float" shape="scalar">
+                    <lookupExp class="logical-expression" domain="total">
+                      <aggregateOp class="logical-operator">
+                        <measures>
+                          <binding name="[__measure__9]">
+                            <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                              <identifierExp class="logical-expression" identifier="[sales total]" />
+                            </funcallExp>
+                          </binding>
+                        </measures>
+                        <groupbys>
+                          <binding name="[prod type1]">
+                            <identifierExp class="logical-expression" identifier="[prod type1]" />
+                          </binding>
+                          <binding name="[ship mode]">
+                            <identifierExp class="logical-expression" identifier="[ship mode]" />
+                          </binding>
+                        </groupbys>
+                        <projectOp class="logical-operator">
+                          <expressions>
+                            <binding name="[prod type1]">
+                              <identifierExp class="logical-expression" identifier="[prod type1]" />
+                            </binding>
+                            <binding name="[ship mode]">
+                              <identifierExp class="logical-expression" identifier="[ship mode]" />
+                            </binding>
+                          </expressions>
+                          <relationOp class="logical-operator" connection="leaf" name="[staples]">
+                            <relation name="Staples" table="[staples]" type="table" />
+                            <cols>
+                            </cols>
+                            <type>
+                              <schema>
+                                <field name="[call center region]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer balance]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer segment]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer state]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[discount]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee dept]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee salary]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee yrs exp]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[fill time]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[gross profit]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[item count]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[manager name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[market segment]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order date]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order day]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order id]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order month]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order priority]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order quantity]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order quarter]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order status]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order year]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[pid]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[price]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type1]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type2]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type3]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type4]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product base margin]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product container]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product id]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product in stock]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[receive time]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[received date]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[sales total]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship charge]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship date]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship handle cost]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship mode]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship priority]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship promo]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier balance]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier region]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier state]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[tax rate]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[total cycle time]">
+                                  <type name="top" />
+                                </field>
+                              </schema>
+                              <schema>
+                              </schema>
+                            </type>
+                          </relationOp>
+                        </projectOp>
+                      </aggregateOp>
+                      <indices>
+                        <identifierExp class="logical-expression" identifier="[prod type1]" />
+                        <identifierExp class="logical-expression" identifier="[ship mode]" />
+                      </indices>
+                      <schema>
+                        <identifierExp class="logical-expression" identifier="[prod type1]" />
+                        <identifierExp class="logical-expression" identifier="[ship mode]" />
+                      </schema>
+                      <output-value>
+                        <identifierExp class="logical-expression" identifier="[__measure__9]" />
+                      </output-value>
+                      <default-value>
+                        <literalExp class="logical-expression" datatype="real" value="%null%" />
+                      </default-value>
+                    </lookupExp>
+                  </funcallExp>
+                </funcallExp>
+              </binding>
+            </measures>
+            <groupbys>
+              <binding name="[prod type1]">
+                <identifierExp class="logical-expression" identifier="[prod type1]" />
+              </binding>
+              <binding name="[ship mode]">
+                <identifierExp class="logical-expression" identifier="[ship mode]" />
+              </binding>
+            </groupbys>
+            <aggregateOp class="logical-operator">
+              <measures>
+              </measures>
+              <groupbys>
+                <binding name="[prod type1]">
+                  <identifierExp class="logical-expression" identifier="[prod type1]" />
+                </binding>
+                <binding name="[ship mode]">
+                  <identifierExp class="logical-expression" identifier="[ship mode]" />
+                </binding>
+                <binding name="[prod type2]">
+                  <identifierExp class="logical-expression" identifier="[prod type2]" />
+                </binding>
+                <binding name="[prod type3]">
+                  <identifierExp class="logical-expression" identifier="[prod type3]" />
+                </binding>
+              </groupbys>
+              <projectOp class="logical-operator">
+                <expressions>
+                  <binding name="[prod type1]">
+                    <identifierExp class="logical-expression" identifier="[prod type1]" />
+                  </binding>
+                  <binding name="[ship mode]">
+                    <identifierExp class="logical-expression" identifier="[ship mode]" />
+                  </binding>
+                </expressions>
+                <relationOp class="logical-operator" connection="leaf" name="[staples]">
+                  <relation name="Staples" table="[staples]" type="table" />
+                  <cols>
+                  </cols>
+                  <type>
+                    <schema>
+                      <field name="[call center region]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer balance]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer segment]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer state]">
+                        <type name="top" />
+                      </field>
+                      <field name="[discount]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee dept]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee salary]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee yrs exp]">
+                        <type name="top" />
+                      </field>
+                      <field name="[fill time]">
+                        <type name="top" />
+                      </field>
+                      <field name="[gross profit]">
+                        <type name="top" />
+                      </field>
+                      <field name="[item count]">
+                        <type name="top" />
+                      </field>
+                      <field name="[manager name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[market segment]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order day]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order id]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order month]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order priority]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order quantity]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order quarter]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order status]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order year]">
+                        <type name="top" />
+                      </field>
+                      <field name="[pid]">
+                        <type name="top" />
+                      </field>
+                      <field name="[price]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type1]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type2]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type3]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type4]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product base margin]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product container]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product id]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product in stock]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[receive time]">
+                        <type name="top" />
+                      </field>
+                      <field name="[received date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[sales total]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship charge]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship handle cost]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship mode]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship priority]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship promo]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier balance]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier region]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier state]">
+                        <type name="top" />
+                      </field>
+                      <field name="[tax rate]">
+                        <type name="top" />
+                      </field>
+                      <field name="[total cycle time]">
+                        <type name="top" />
+                      </field>
+                    </schema>
+                    <schema>
+                    </schema>
+                  </type>
+                </relationOp>
+              </projectOp>
+            </aggregateOp>
+          </aggregateOp>
+          <indices>
+            <identifierExp class="logical-expression" identifier="[prod type1]" />
+            <identifierExp class="logical-expression" identifier="[ship mode]" />
+          </indices>
+          <schema>
+            <identifierExp class="logical-expression" identifier="[prod type1]" />
+            <identifierExp class="logical-expression" identifier="[ship mode]" />
+          </schema>
+          <output-value>
+            <identifierExp class="logical-expression" identifier="[__measure__10]" />
+          </output-value>
+          <default-value>
+            <literalExp class="logical-expression" datatype="real" value="%null%" />
+          </default-value>
+        </lookupExp>
+      </binding>
+      <binding name="[sum:LOD - Nesting - 2 (copy):ok]">
+        <lookupExp class="logical-expression" domain="total">
+          <aggregateOp class="logical-operator">
+            <measures>
+              <binding name="[__measure__12]">
+                <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                  <funcallExp class="logical-expression" function="float" shape="scalar">
+                    <lookupExp class="logical-expression" domain="total">
+                      <aggregateOp class="logical-operator">
+                        <measures>
+                          <binding name="[__measure__11]">
+                            <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                              <identifierExp class="logical-expression" identifier="[sales total]" />
+                            </funcallExp>
+                          </binding>
+                        </measures>
+                        <groupbys>
+                          <binding name="[prod type1]">
+                            <identifierExp class="logical-expression" identifier="[prod type1]" />
+                          </binding>
+                        </groupbys>
+                        <projectOp class="logical-operator">
+                          <expressions>
+                            <binding name="[prod type1]">
+                              <identifierExp class="logical-expression" identifier="[prod type1]" />
+                            </binding>
+                            <binding name="[ship mode]">
+                              <identifierExp class="logical-expression" identifier="[ship mode]" />
+                            </binding>
+                          </expressions>
+                          <relationOp class="logical-operator" connection="leaf" name="[staples]">
+                            <relation name="Staples" table="[staples]" type="table" />
+                            <cols>
+                            </cols>
+                            <type>
+                              <schema>
+                                <field name="[call center region]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer balance]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer segment]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer state]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[discount]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee dept]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee salary]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee yrs exp]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[fill time]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[gross profit]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[item count]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[manager name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[market segment]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order date]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order day]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order id]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order month]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order priority]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order quantity]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order quarter]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order status]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order year]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[pid]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[price]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type1]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type2]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type3]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type4]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product base margin]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product container]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product id]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product in stock]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[receive time]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[received date]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[sales total]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship charge]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship date]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship handle cost]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship mode]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship priority]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship promo]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier balance]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier region]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier state]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[tax rate]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[total cycle time]">
+                                  <type name="top" />
+                                </field>
+                              </schema>
+                              <schema>
+                              </schema>
+                            </type>
+                          </relationOp>
+                        </projectOp>
+                      </aggregateOp>
+                      <indices>
+                        <identifierExp class="logical-expression" identifier="[prod type1]" />
+                      </indices>
+                      <schema>
+                        <identifierExp class="logical-expression" identifier="[prod type1]" />
+                      </schema>
+                      <output-value>
+                        <identifierExp class="logical-expression" identifier="[__measure__11]" />
+                      </output-value>
+                      <default-value>
+                        <literalExp class="logical-expression" datatype="real" value="%null%" />
+                      </default-value>
+                    </lookupExp>
+                  </funcallExp>
+                </funcallExp>
+              </binding>
+            </measures>
+            <groupbys>
+              <binding name="[prod type1]">
+                <identifierExp class="logical-expression" identifier="[prod type1]" />
+              </binding>
+              <binding name="[ship mode]">
+                <identifierExp class="logical-expression" identifier="[ship mode]" />
+              </binding>
+            </groupbys>
+            <aggregateOp class="logical-operator">
+              <measures>
+              </measures>
+              <groupbys>
+                <binding name="[prod type1]">
+                  <identifierExp class="logical-expression" identifier="[prod type1]" />
+                </binding>
+                <binding name="[prod type2]">
+                  <identifierExp class="logical-expression" identifier="[prod type2]" />
+                </binding>
+                <binding name="[prod type3]">
+                  <identifierExp class="logical-expression" identifier="[prod type3]" />
+                </binding>
+                <binding name="[ship mode]">
+                  <identifierExp class="logical-expression" identifier="[ship mode]" />
+                </binding>
+              </groupbys>
+              <projectOp class="logical-operator">
+                <expressions>
+                  <binding name="[prod type1]">
+                    <identifierExp class="logical-expression" identifier="[prod type1]" />
+                  </binding>
+                  <binding name="[ship mode]">
+                    <identifierExp class="logical-expression" identifier="[ship mode]" />
+                  </binding>
+                </expressions>
+                <relationOp class="logical-operator" connection="leaf" name="[staples]">
+                  <relation name="Staples" table="[staples]" type="table" />
+                  <cols>
+                  </cols>
+                  <type>
+                    <schema>
+                      <field name="[call center region]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer balance]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer segment]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer state]">
+                        <type name="top" />
+                      </field>
+                      <field name="[discount]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee dept]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee salary]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee yrs exp]">
+                        <type name="top" />
+                      </field>
+                      <field name="[fill time]">
+                        <type name="top" />
+                      </field>
+                      <field name="[gross profit]">
+                        <type name="top" />
+                      </field>
+                      <field name="[item count]">
+                        <type name="top" />
+                      </field>
+                      <field name="[manager name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[market segment]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order day]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order id]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order month]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order priority]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order quantity]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order quarter]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order status]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order year]">
+                        <type name="top" />
+                      </field>
+                      <field name="[pid]">
+                        <type name="top" />
+                      </field>
+                      <field name="[price]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type1]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type2]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type3]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type4]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product base margin]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product container]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product id]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product in stock]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[receive time]">
+                        <type name="top" />
+                      </field>
+                      <field name="[received date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[sales total]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship charge]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship handle cost]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship mode]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship priority]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship promo]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier balance]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier region]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier state]">
+                        <type name="top" />
+                      </field>
+                      <field name="[tax rate]">
+                        <type name="top" />
+                      </field>
+                      <field name="[total cycle time]">
+                        <type name="top" />
+                      </field>
+                    </schema>
+                    <schema>
+                    </schema>
+                  </type>
+                </relationOp>
+              </projectOp>
+            </aggregateOp>
+          </aggregateOp>
+          <indices>
+            <identifierExp class="logical-expression" identifier="[prod type1]" />
+            <identifierExp class="logical-expression" identifier="[ship mode]" />
+          </indices>
+          <schema>
+            <identifierExp class="logical-expression" identifier="[prod type1]" />
+            <identifierExp class="logical-expression" identifier="[ship mode]" />
+          </schema>
+          <output-value>
+            <identifierExp class="logical-expression" identifier="[__measure__12]" />
+          </output-value>
+          <default-value>
+            <literalExp class="logical-expression" datatype="real" value="%null%" />
+          </default-value>
+        </lookupExp>
+      </binding>
+      <binding name="[sum:LOD - Nesting - 3 (copy):ok]">
+        <lookupExp class="logical-expression" domain="total">
+          <aggregateOp class="logical-operator">
+            <measures>
+              <binding name="[__measure__14]">
+                <funcallExp class="logical-expression" function="AVG" shape="aggregate">
+                  <lookupExp class="logical-expression" domain="total">
+                    <aggregateOp class="logical-operator">
+                      <measures>
+                        <binding name="[__measure__13]">
+                          <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                            <identifierExp class="logical-expression" identifier="[sales total]" />
+                          </funcallExp>
+                        </binding>
+                      </measures>
+                      <groupbys>
+                        <binding name="[prod type1]">
+                          <identifierExp class="logical-expression" identifier="[prod type1]" />
+                        </binding>
+                        <binding name="[prod type3]">
+                          <identifierExp class="logical-expression" identifier="[prod type3]" />
+                        </binding>
+                        <binding name="[prod type2]">
+                          <identifierExp class="logical-expression" identifier="[prod type2]" />
+                        </binding>
+                      </groupbys>
+                      <projectOp class="logical-operator">
+                        <expressions>
+                          <binding name="[prod type1]">
+                            <identifierExp class="logical-expression" identifier="[prod type1]" />
+                          </binding>
+                          <binding name="[ship mode]">
+                            <identifierExp class="logical-expression" identifier="[ship mode]" />
+                          </binding>
+                        </expressions>
+                        <relationOp class="logical-operator" connection="leaf" name="[staples]">
+                          <relation name="Staples" table="[staples]" type="table" />
+                          <cols>
+                          </cols>
+                          <type>
+                            <schema>
+                              <field name="[call center region]">
+                                <type name="top" />
+                              </field>
+                              <field name="[customer balance]">
+                                <type name="top" />
+                              </field>
+                              <field name="[customer name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[customer segment]">
+                                <type name="top" />
+                              </field>
+                              <field name="[customer state]">
+                                <type name="top" />
+                              </field>
+                              <field name="[discount]">
+                                <type name="top" />
+                              </field>
+                              <field name="[employee dept]">
+                                <type name="top" />
+                              </field>
+                              <field name="[employee name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[employee salary]">
+                                <type name="top" />
+                              </field>
+                              <field name="[employee yrs exp]">
+                                <type name="top" />
+                              </field>
+                              <field name="[fill time]">
+                                <type name="top" />
+                              </field>
+                              <field name="[gross profit]">
+                                <type name="top" />
+                              </field>
+                              <field name="[item count]">
+                                <type name="top" />
+                              </field>
+                              <field name="[manager name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[market segment]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order date]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order day]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order id]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order month]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order priority]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order quantity]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order quarter]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order status]">
+                                <type name="top" />
+                              </field>
+                              <field name="[order year]">
+                                <type name="top" />
+                              </field>
+                              <field name="[pid]">
+                                <type name="top" />
+                              </field>
+                              <field name="[price]">
+                                <type name="top" />
+                              </field>
+                              <field name="[prod type1]">
+                                <type name="top" />
+                              </field>
+                              <field name="[prod type2]">
+                                <type name="top" />
+                              </field>
+                              <field name="[prod type3]">
+                                <type name="top" />
+                              </field>
+                              <field name="[prod type4]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product base margin]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product container]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product id]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product in stock]">
+                                <type name="top" />
+                              </field>
+                              <field name="[product name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[receive time]">
+                                <type name="top" />
+                              </field>
+                              <field name="[received date]">
+                                <type name="top" />
+                              </field>
+                              <field name="[sales total]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship charge]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship date]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship handle cost]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship mode]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship priority]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ship promo]">
+                                <type name="top" />
+                              </field>
+                              <field name="[supplier balance]">
+                                <type name="top" />
+                              </field>
+                              <field name="[supplier name]">
+                                <type name="top" />
+                              </field>
+                              <field name="[supplier region]">
+                                <type name="top" />
+                              </field>
+                              <field name="[supplier state]">
+                                <type name="top" />
+                              </field>
+                              <field name="[tax rate]">
+                                <type name="top" />
+                              </field>
+                              <field name="[total cycle time]">
+                                <type name="top" />
+                              </field>
+                            </schema>
+                            <schema>
+                            </schema>
+                          </type>
+                        </relationOp>
+                      </projectOp>
+                    </aggregateOp>
+                    <indices>
+                      <identifierExp class="logical-expression" identifier="[prod type1]" />
+                      <identifierExp class="logical-expression" identifier="[prod type3]" />
+                      <identifierExp class="logical-expression" identifier="[prod type2]" />
+                    </indices>
+                    <schema>
+                      <identifierExp class="logical-expression" identifier="[prod type1]" />
+                      <identifierExp class="logical-expression" identifier="[prod type3]" />
+                      <identifierExp class="logical-expression" identifier="[prod type2]" />
+                    </schema>
+                    <output-value>
+                      <identifierExp class="logical-expression" identifier="[__measure__13]" />
+                    </output-value>
+                    <default-value>
+                      <literalExp class="logical-expression" datatype="real" value="%null%" />
+                    </default-value>
+                  </lookupExp>
+                </funcallExp>
+              </binding>
+            </measures>
+            <groupbys>
+              <binding name="[prod type1]">
+                <identifierExp class="logical-expression" identifier="[prod type1]" />
+              </binding>
+            </groupbys>
+            <aggregateOp class="logical-operator">
+              <measures>
+              </measures>
+              <groupbys>
+                <binding name="[prod type1]">
+                  <identifierExp class="logical-expression" identifier="[prod type1]" />
+                </binding>
+                <binding name="[prod type3]">
+                  <identifierExp class="logical-expression" identifier="[prod type3]" />
+                </binding>
+                <binding name="[prod type2]">
+                  <identifierExp class="logical-expression" identifier="[prod type2]" />
+                </binding>
+              </groupbys>
+              <projectOp class="logical-operator">
+                <expressions>
+                  <binding name="[prod type1]">
+                    <identifierExp class="logical-expression" identifier="[prod type1]" />
+                  </binding>
+                  <binding name="[ship mode]">
+                    <identifierExp class="logical-expression" identifier="[ship mode]" />
+                  </binding>
+                </expressions>
+                <relationOp class="logical-operator" connection="leaf" name="[staples]">
+                  <relation name="Staples" table="[staples]" type="table" />
+                  <cols>
+                  </cols>
+                  <type>
+                    <schema>
+                      <field name="[call center region]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer balance]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer segment]">
+                        <type name="top" />
+                      </field>
+                      <field name="[customer state]">
+                        <type name="top" />
+                      </field>
+                      <field name="[discount]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee dept]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee salary]">
+                        <type name="top" />
+                      </field>
+                      <field name="[employee yrs exp]">
+                        <type name="top" />
+                      </field>
+                      <field name="[fill time]">
+                        <type name="top" />
+                      </field>
+                      <field name="[gross profit]">
+                        <type name="top" />
+                      </field>
+                      <field name="[item count]">
+                        <type name="top" />
+                      </field>
+                      <field name="[manager name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[market segment]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order day]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order id]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order month]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order priority]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order quantity]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order quarter]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order status]">
+                        <type name="top" />
+                      </field>
+                      <field name="[order year]">
+                        <type name="top" />
+                      </field>
+                      <field name="[pid]">
+                        <type name="top" />
+                      </field>
+                      <field name="[price]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type1]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type2]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type3]">
+                        <type name="top" />
+                      </field>
+                      <field name="[prod type4]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product base margin]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product container]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product id]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product in stock]">
+                        <type name="top" />
+                      </field>
+                      <field name="[product name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[receive time]">
+                        <type name="top" />
+                      </field>
+                      <field name="[received date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[sales total]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship charge]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship date]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship handle cost]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship mode]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship priority]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ship promo]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier balance]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier name]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier region]">
+                        <type name="top" />
+                      </field>
+                      <field name="[supplier state]">
+                        <type name="top" />
+                      </field>
+                      <field name="[tax rate]">
+                        <type name="top" />
+                      </field>
+                      <field name="[total cycle time]">
+                        <type name="top" />
+                      </field>
+                    </schema>
+                    <schema>
+                    </schema>
+                  </type>
+                </relationOp>
+              </projectOp>
+            </aggregateOp>
+          </aggregateOp>
+          <indices>
+            <identifierExp class="logical-expression" identifier="[prod type1]" />
+          </indices>
+          <schema>
+            <identifierExp class="logical-expression" identifier="[prod type1]" />
+          </schema>
+          <output-value>
+            <identifierExp class="logical-expression" identifier="[__measure__14]" />
+          </output-value>
+          <default-value>
+            <literalExp class="logical-expression" datatype="real" value="%null%" />
+          </default-value>
+        </lookupExp>
+      </binding>
+    </expressions>
+    <aggregateOp class="logical-operator">
+      <measures>
+        <binding name="[avg:Calculation_8601225013155991:ok]">
+          <funcallExp class="logical-expression" function="AVG" shape="aggregate">
+            <funcallExp class="logical-expression" function="/" shape="scalar">
+              <funcallExp class="logical-expression" function="+" shape="scalar">
+                <funcallExp class="logical-expression" function="+" shape="scalar">
+                  <lookupExp class="logical-expression" domain="total">
+                    <aggregateOp class="logical-operator">
+                      <measures>
+                        <binding name="[__measure__5]">
+                          <funcallExp class="logical-expression" function="AVG" shape="aggregate">
+                            <lookupExp class="logical-expression" domain="total">
+                              <aggregateOp class="logical-operator">
+                                <measures>
+                                  <binding name="[__measure__4]">
+                                    <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                                      <identifierExp class="logical-expression" identifier="[sales total]" />
+                                    </funcallExp>
+                                  </binding>
+                                </measures>
+                                <groupbys>
+                                  <binding name="[prod type1]">
+                                    <identifierExp class="logical-expression" identifier="[prod type1]" />
+                                  </binding>
+                                  <binding name="[prod type3]">
+                                    <identifierExp class="logical-expression" identifier="[prod type3]" />
+                                  </binding>
+                                  <binding name="[prod type2]">
+                                    <identifierExp class="logical-expression" identifier="[prod type2]" />
+                                  </binding>
+                                </groupbys>
+                                <projectOp class="logical-operator">
+                                  <expressions>
+                                    <binding name="[prod type1]">
+                                      <identifierExp class="logical-expression" identifier="[prod type1]" />
+                                    </binding>
+                                    <binding name="[ship mode]">
+                                      <identifierExp class="logical-expression" identifier="[ship mode]" />
+                                    </binding>
+                                  </expressions>
+                                  <relationOp class="logical-operator" connection="leaf" name="[staples]">
+                                    <relation name="Staples" table="[staples]" type="table" />
+                                    <cols>
+                                    </cols>
+                                    <type>
+                                      <schema>
+                                        <field name="[call center region]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[customer balance]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[customer name]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[customer segment]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[customer state]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[discount]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[employee dept]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[employee name]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[employee salary]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[employee yrs exp]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[fill time]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[gross profit]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[item count]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[manager name]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[market segment]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[order date]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[order day]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[order id]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[order month]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[order priority]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[order quantity]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[order quarter]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[order status]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[order year]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[pid]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[price]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[prod type1]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[prod type2]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[prod type3]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[prod type4]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[product base margin]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[product container]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[product id]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[product in stock]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[product name]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[receive time]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[received date]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[sales total]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ship charge]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ship date]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ship handle cost]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ship mode]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ship priority]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ship promo]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[supplier balance]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[supplier name]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[supplier region]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[supplier state]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[tax rate]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[total cycle time]">
+                                          <type name="top" />
+                                        </field>
+                                      </schema>
+                                      <schema>
+                                      </schema>
+                                    </type>
+                                  </relationOp>
+                                </projectOp>
+                              </aggregateOp>
+                              <indices>
+                                <identifierExp class="logical-expression" identifier="[prod type1]" />
+                                <identifierExp class="logical-expression" identifier="[prod type3]" />
+                                <identifierExp class="logical-expression" identifier="[prod type2]" />
+                              </indices>
+                              <schema>
+                                <identifierExp class="logical-expression" identifier="[prod type1]" />
+                                <identifierExp class="logical-expression" identifier="[prod type3]" />
+                                <identifierExp class="logical-expression" identifier="[prod type2]" />
+                              </schema>
+                              <output-value>
+                                <identifierExp class="logical-expression" identifier="[__measure__4]" />
+                              </output-value>
+                              <default-value>
+                                <literalExp class="logical-expression" datatype="real" value="%null%" />
+                              </default-value>
+                            </lookupExp>
+                          </funcallExp>
+                        </binding>
+                      </measures>
+                      <groupbys>
+                        <binding name="[prod type1]">
+                          <identifierExp class="logical-expression" identifier="[prod type1]" />
+                        </binding>
+                      </groupbys>
+                      <aggregateOp class="logical-operator">
+                        <measures>
+                        </measures>
+                        <groupbys>
+                          <binding name="[prod type1]">
+                            <identifierExp class="logical-expression" identifier="[prod type1]" />
+                          </binding>
+                          <binding name="[prod type3]">
+                            <identifierExp class="logical-expression" identifier="[prod type3]" />
+                          </binding>
+                          <binding name="[prod type2]">
+                            <identifierExp class="logical-expression" identifier="[prod type2]" />
+                          </binding>
+                        </groupbys>
+                        <projectOp class="logical-operator">
+                          <expressions>
+                            <binding name="[prod type1]">
+                              <identifierExp class="logical-expression" identifier="[prod type1]" />
+                            </binding>
+                            <binding name="[ship mode]">
+                              <identifierExp class="logical-expression" identifier="[ship mode]" />
+                            </binding>
+                          </expressions>
+                          <relationOp class="logical-operator" connection="leaf" name="[staples]">
+                            <relation name="Staples" table="[staples]" type="table" />
+                            <cols>
+                            </cols>
+                            <type>
+                              <schema>
+                                <field name="[call center region]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer balance]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer segment]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer state]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[discount]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee dept]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee salary]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee yrs exp]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[fill time]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[gross profit]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[item count]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[manager name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[market segment]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order date]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order day]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order id]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order month]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order priority]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order quantity]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order quarter]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order status]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order year]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[pid]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[price]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type1]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type2]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type3]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type4]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product base margin]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product container]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product id]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product in stock]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[receive time]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[received date]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[sales total]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship charge]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship date]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship handle cost]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship mode]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship priority]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship promo]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier balance]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier region]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier state]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[tax rate]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[total cycle time]">
+                                  <type name="top" />
+                                </field>
+                              </schema>
+                              <schema>
+                              </schema>
+                            </type>
+                          </relationOp>
+                        </projectOp>
+                      </aggregateOp>
+                    </aggregateOp>
+                    <indices>
+                      <identifierExp class="logical-expression" identifier="[prod type1]" />
+                    </indices>
+                    <schema>
+                      <identifierExp class="logical-expression" identifier="[prod type1]" />
+                    </schema>
+                    <output-value>
+                      <identifierExp class="logical-expression" identifier="[__measure__5]" />
+                    </output-value>
+                    <default-value>
+                      <literalExp class="logical-expression" datatype="real" value="%null%" />
+                    </default-value>
+                  </lookupExp>
+                  <funcallExp class="logical-expression" function="float" shape="scalar">
+                    <lookupExp class="logical-expression" domain="total">
+                      <aggregateOp class="logical-operator">
+                        <measures>
+                          <binding name="[__measure__6]">
+                            <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                              <identifierExp class="logical-expression" identifier="[sales total]" />
+                            </funcallExp>
+                          </binding>
+                        </measures>
+                        <groupbys>
+                          <binding name="[prod type1]">
+                            <identifierExp class="logical-expression" identifier="[prod type1]" />
+                          </binding>
+                          <binding name="[ship mode]">
+                            <identifierExp class="logical-expression" identifier="[ship mode]" />
+                          </binding>
+                        </groupbys>
+                        <projectOp class="logical-operator">
+                          <expressions>
+                            <binding name="[prod type1]">
+                              <identifierExp class="logical-expression" identifier="[prod type1]" />
+                            </binding>
+                            <binding name="[ship mode]">
+                              <identifierExp class="logical-expression" identifier="[ship mode]" />
+                            </binding>
+                          </expressions>
+                          <relationOp class="logical-operator" connection="leaf" name="[staples]">
+                            <relation name="Staples" table="[staples]" type="table" />
+                            <cols>
+                            </cols>
+                            <type>
+                              <schema>
+                                <field name="[call center region]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer balance]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer segment]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[customer state]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[discount]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee dept]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee salary]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[employee yrs exp]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[fill time]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[gross profit]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[item count]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[manager name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[market segment]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order date]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order day]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order id]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order month]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order priority]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order quantity]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order quarter]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order status]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[order year]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[pid]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[price]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type1]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type2]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type3]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[prod type4]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product base margin]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product container]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product id]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product in stock]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[product name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[receive time]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[received date]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[sales total]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship charge]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship date]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship handle cost]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship mode]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship priority]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ship promo]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier balance]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier name]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier region]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[supplier state]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[tax rate]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[total cycle time]">
+                                  <type name="top" />
+                                </field>
+                              </schema>
+                              <schema>
+                              </schema>
+                            </type>
+                          </relationOp>
+                        </projectOp>
+                      </aggregateOp>
+                      <indices>
+                        <identifierExp class="logical-expression" identifier="[prod type1]" />
+                        <identifierExp class="logical-expression" identifier="[ship mode]" />
+                      </indices>
+                      <schema>
+                        <identifierExp class="logical-expression" identifier="[prod type1]" />
+                        <identifierExp class="logical-expression" identifier="[ship mode]" />
+                      </schema>
+                      <output-value>
+                        <identifierExp class="logical-expression" identifier="[__measure__6]" />
+                      </output-value>
+                      <default-value>
+                        <literalExp class="logical-expression" datatype="real" value="%null%" />
+                      </default-value>
+                    </lookupExp>
+                  </funcallExp>
+                </funcallExp>
+                <identifierExp class="logical-expression" identifier="[sales total]" />
+              </funcallExp>
+              <lookupExp class="logical-expression" domain="total">
+                <aggregateOp class="logical-operator">
+                  <measures>
+                    <binding name="[__measure__7]">
+                      <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                        <identifierExp class="logical-expression" identifier="[product base margin]" />
+                      </funcallExp>
+                    </binding>
+                  </measures>
+                  <groupbys>
+                    <binding name="[market segment]">
+                      <identifierExp class="logical-expression" identifier="[market segment]" />
+                    </binding>
+                  </groupbys>
+                  <projectOp class="logical-operator">
+                    <expressions>
+                      <binding name="[prod type1]">
+                        <identifierExp class="logical-expression" identifier="[prod type1]" />
+                      </binding>
+                      <binding name="[ship mode]">
+                        <identifierExp class="logical-expression" identifier="[ship mode]" />
+                      </binding>
+                    </expressions>
+                    <relationOp class="logical-operator" connection="leaf" name="[staples]">
+                      <relation name="Staples" table="[staples]" type="table" />
+                      <cols>
+                      </cols>
+                      <type>
+                        <schema>
+                          <field name="[call center region]">
+                            <type name="top" />
+                          </field>
+                          <field name="[customer balance]">
+                            <type name="top" />
+                          </field>
+                          <field name="[customer name]">
+                            <type name="top" />
+                          </field>
+                          <field name="[customer segment]">
+                            <type name="top" />
+                          </field>
+                          <field name="[customer state]">
+                            <type name="top" />
+                          </field>
+                          <field name="[discount]">
+                            <type name="top" />
+                          </field>
+                          <field name="[employee dept]">
+                            <type name="top" />
+                          </field>
+                          <field name="[employee name]">
+                            <type name="top" />
+                          </field>
+                          <field name="[employee salary]">
+                            <type name="top" />
+                          </field>
+                          <field name="[employee yrs exp]">
+                            <type name="top" />
+                          </field>
+                          <field name="[fill time]">
+                            <type name="top" />
+                          </field>
+                          <field name="[gross profit]">
+                            <type name="top" />
+                          </field>
+                          <field name="[item count]">
+                            <type name="top" />
+                          </field>
+                          <field name="[manager name]">
+                            <type name="top" />
+                          </field>
+                          <field name="[market segment]">
+                            <type name="top" />
+                          </field>
+                          <field name="[order date]">
+                            <type name="top" />
+                          </field>
+                          <field name="[order day]">
+                            <type name="top" />
+                          </field>
+                          <field name="[order id]">
+                            <type name="top" />
+                          </field>
+                          <field name="[order month]">
+                            <type name="top" />
+                          </field>
+                          <field name="[order priority]">
+                            <type name="top" />
+                          </field>
+                          <field name="[order quantity]">
+                            <type name="top" />
+                          </field>
+                          <field name="[order quarter]">
+                            <type name="top" />
+                          </field>
+                          <field name="[order status]">
+                            <type name="top" />
+                          </field>
+                          <field name="[order year]">
+                            <type name="top" />
+                          </field>
+                          <field name="[pid]">
+                            <type name="top" />
+                          </field>
+                          <field name="[price]">
+                            <type name="top" />
+                          </field>
+                          <field name="[prod type1]">
+                            <type name="top" />
+                          </field>
+                          <field name="[prod type2]">
+                            <type name="top" />
+                          </field>
+                          <field name="[prod type3]">
+                            <type name="top" />
+                          </field>
+                          <field name="[prod type4]">
+                            <type name="top" />
+                          </field>
+                          <field name="[product base margin]">
+                            <type name="top" />
+                          </field>
+                          <field name="[product container]">
+                            <type name="top" />
+                          </field>
+                          <field name="[product id]">
+                            <type name="top" />
+                          </field>
+                          <field name="[product in stock]">
+                            <type name="top" />
+                          </field>
+                          <field name="[product name]">
+                            <type name="top" />
+                          </field>
+                          <field name="[receive time]">
+                            <type name="top" />
+                          </field>
+                          <field name="[received date]">
+                            <type name="top" />
+                          </field>
+                          <field name="[sales total]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ship charge]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ship date]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ship handle cost]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ship mode]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ship priority]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ship promo]">
+                            <type name="top" />
+                          </field>
+                          <field name="[supplier balance]">
+                            <type name="top" />
+                          </field>
+                          <field name="[supplier name]">
+                            <type name="top" />
+                          </field>
+                          <field name="[supplier region]">
+                            <type name="top" />
+                          </field>
+                          <field name="[supplier state]">
+                            <type name="top" />
+                          </field>
+                          <field name="[tax rate]">
+                            <type name="top" />
+                          </field>
+                          <field name="[total cycle time]">
+                            <type name="top" />
+                          </field>
+                        </schema>
+                        <schema>
+                        </schema>
+                      </type>
+                    </relationOp>
+                  </projectOp>
+                </aggregateOp>
+                <indices>
+                  <identifierExp class="logical-expression" identifier="[market segment]" />
+                </indices>
+                <schema>
+                  <identifierExp class="logical-expression" identifier="[market segment]" />
+                </schema>
+                <output-value>
+                  <identifierExp class="logical-expression" identifier="[__measure__7]" />
+                </output-value>
+                <default-value>
+                  <literalExp class="logical-expression" datatype="real" value="%null%" />
+                </default-value>
+              </lookupExp>
+            </funcallExp>
+          </funcallExp>
+        </binding>
+      </measures>
+      <groupbys>
+        <binding name="[prod type1]">
+          <identifierExp class="logical-expression" identifier="[prod type1]" />
+        </binding>
+        <binding name="[ship mode]">
+          <identifierExp class="logical-expression" identifier="[ship mode]" />
+        </binding>
+      </groupbys>
+      <projectOp class="logical-operator">
+        <expressions>
+          <binding name="[prod type1]">
+            <identifierExp class="logical-expression" identifier="[prod type1]" />
+          </binding>
+          <binding name="[ship mode]">
+            <identifierExp class="logical-expression" identifier="[ship mode]" />
+          </binding>
+        </expressions>
+        <relationOp class="logical-operator" connection="leaf" name="[staples]">
+          <relation name="Staples" table="[staples]" type="table" />
+          <cols>
+          </cols>
+          <type>
+            <schema>
+              <field name="[call center region]">
+                <type name="top" />
+              </field>
+              <field name="[customer balance]">
+                <type name="top" />
+              </field>
+              <field name="[customer name]">
+                <type name="top" />
+              </field>
+              <field name="[customer segment]">
+                <type name="top" />
+              </field>
+              <field name="[customer state]">
+                <type name="top" />
+              </field>
+              <field name="[discount]">
+                <type name="top" />
+              </field>
+              <field name="[employee dept]">
+                <type name="top" />
+              </field>
+              <field name="[employee name]">
+                <type name="top" />
+              </field>
+              <field name="[employee salary]">
+                <type name="top" />
+              </field>
+              <field name="[employee yrs exp]">
+                <type name="top" />
+              </field>
+              <field name="[fill time]">
+                <type name="top" />
+              </field>
+              <field name="[gross profit]">
+                <type name="top" />
+              </field>
+              <field name="[item count]">
+                <type name="top" />
+              </field>
+              <field name="[manager name]">
+                <type name="top" />
+              </field>
+              <field name="[market segment]">
+                <type name="top" />
+              </field>
+              <field name="[order date]">
+                <type name="top" />
+              </field>
+              <field name="[order day]">
+                <type name="top" />
+              </field>
+              <field name="[order id]">
+                <type name="top" />
+              </field>
+              <field name="[order month]">
+                <type name="top" />
+              </field>
+              <field name="[order priority]">
+                <type name="top" />
+              </field>
+              <field name="[order quantity]">
+                <type name="top" />
+              </field>
+              <field name="[order quarter]">
+                <type name="top" />
+              </field>
+              <field name="[order status]">
+                <type name="top" />
+              </field>
+              <field name="[order year]">
+                <type name="top" />
+              </field>
+              <field name="[pid]">
+                <type name="top" />
+              </field>
+              <field name="[price]">
+                <type name="top" />
+              </field>
+              <field name="[prod type1]">
+                <type name="top" />
+              </field>
+              <field name="[prod type2]">
+                <type name="top" />
+              </field>
+              <field name="[prod type3]">
+                <type name="top" />
+              </field>
+              <field name="[prod type4]">
+                <type name="top" />
+              </field>
+              <field name="[product base margin]">
+                <type name="top" />
+              </field>
+              <field name="[product container]">
+                <type name="top" />
+              </field>
+              <field name="[product id]">
+                <type name="top" />
+              </field>
+              <field name="[product in stock]">
+                <type name="top" />
+              </field>
+              <field name="[product name]">
+                <type name="top" />
+              </field>
+              <field name="[receive time]">
+                <type name="top" />
+              </field>
+              <field name="[received date]">
+                <type name="top" />
+              </field>
+              <field name="[sales total]">
+                <type name="top" />
+              </field>
+              <field name="[ship charge]">
+                <type name="top" />
+              </field>
+              <field name="[ship date]">
+                <type name="top" />
+              </field>
+              <field name="[ship handle cost]">
+                <type name="top" />
+              </field>
+              <field name="[ship mode]">
+                <type name="top" />
+              </field>
+              <field name="[ship priority]">
+                <type name="top" />
+              </field>
+              <field name="[ship promo]">
+                <type name="top" />
+              </field>
+              <field name="[supplier balance]">
+                <type name="top" />
+              </field>
+              <field name="[supplier name]">
+                <type name="top" />
+              </field>
+              <field name="[supplier region]">
+                <type name="top" />
+              </field>
+              <field name="[supplier state]">
+                <type name="top" />
+              </field>
+              <field name="[tax rate]">
+                <type name="top" />
+              </field>
+              <field name="[total cycle time]">
+                <type name="top" />
+              </field>
+            </schema>
+            <schema>
+            </schema>
+          </type>
+        </relationOp>
+      </projectOp>
+    </aggregateOp>
+  </projectOp>
+</logical-query>

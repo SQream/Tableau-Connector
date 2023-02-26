@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<logical-query>
+  <selects>
+    <field>[sum:Calculation_555068687593533440:ok]</field>
+  </selects>
+  <aggregateOp class="logical-operator">
+    <measures>
+      <binding name="[sum:Calculation_555068687593533440:ok]">
+        <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+          <funcallExp class="logical-expression" function="/" shape="scalar">
+            <identifierExp class="logical-expression" identifier="[Price]" />
+            <literalExp class="logical-expression" datatype="real" value="1.1000000000000001" />
+          </funcallExp>
+        </funcallExp>
+      </binding>
+    </measures>
+    <groupbys>
+    </groupbys>
+    <projectOp class="logical-operator">
+      <expressions>
+      </expressions>
+      <relationOp class="logical-operator" connection="leaf" name="[tactile-pulsar-824.TestV1].[StaplesDateTime]">
+        <relation name="Staples" table="[tactile-pulsar-824.TestV1].[StaplesDateTime]" type="table" />
+        <cols>
+        </cols>
+        <type>
+          <schema>
+            <field name="[CallCenterRegion]">
+              <type name="top" />
+            </field>
+            <field name="[CustomerBalance]">
+              <type name="top" />
+            </field>
+            <field name="[CustomerName]">
+              <type name="top" />
+            </field>
+            <field name="[CustomerSegment]">
+              <type name="top" />
+            </field>
+            <field name="[CustomerState]">
+              <type name="top" />
+            </field>
+            <field name="[Discount]">
+              <type name="top" />
+            </field>
+            <field name="[EmployeeDept]">
+              <type name="top" />
+            </field>
+            <field name="[EmployeeName]">
+              <type name="top" />
+            </field>
+            <field name="[EmployeeSalary]">
+              <type name="top" />
+            </field>
+            <field name="[EmployeeYrsExp]">
+              <type name="top" />
+            </field>
+            <field name="[FillTime]">
+              <type name="top" />
+            </field>
+            <field name="[GrossProfit]">
+              <type name="top" />
+            </field>
+            <field name="[ItemCount]">
+              <type name="top" />
+            </field>
+            <field name="[ManagerName]">
+              <type name="top" />
+            </field>
+            <field name="[MarketSegment]">
+              <type name="top" />
+            </field>
+            <field name="[OrderDate]">
+              <type name="top" />
+            </field>
+            <field name="[OrderDay]">
+              <type name="top" />
+            </field>
+            <field name="[OrderID]">
+              <type name="top" />
+            </field>
+            <field name="[OrderMonth]">
+              <type name="top" />
+            </field>
+            <field name="[OrderPriority]">
+              <type name="top" />
+            </field>
+            <field name="[OrderQuantity]">
+              <type name="top" />
+            </field>
+            <field name="[OrderQuarter]">
+              <type name="top" />
+            </field>
+            <field name="[OrderStatus]">
+              <type name="top" />
+            </field>
+            <field name="[OrderYear]">
+              <type name="top" />
+            </field>
+            <field name="[PID]">
+              <type name="top" />
+            </field>
+            <field name="[Price]">
+              <type name="top" />
+            </field>
+            <field name="[ProdType1]">
+              <type name="top" />
+            </field>
+            <field name="[ProdType2]">
+              <type name="top" />
+            </field>
+            <field name="[ProdType3]">
+              <type name="top" />
+            </field>
+            <field name="[ProdType4]">
+              <type name="top" />
+            </field>
+            <field name="[ProductBaseMargin]">
+              <type name="top" />
+            </field>
+            <field name="[ProductContainer]">
+              <type name="top" />
+            </field>
+            <field name="[ProductID]">
+              <type name="top" />
+            </field>
+            <field name="[ProductInStock]">
+              <type name="top" />
+            </field>
+            <field name="[ProductName]">
+              <type name="top" />
+            </field>
+            <field name="[ReceiveTime]">
+              <type name="top" />
+            </field>
+            <field name="[ReceivedDate]">
+              <type name="top" />
+            </field>
+            <field name="[SalesTotal]">
+              <type name="top" />
+            </field>
+            <field name="[ShipCharge]">
+              <type name="top" />
+            </field>
+            <field name="[ShipDate]">
+              <type name="top" />
+            </field>
+            <field name="[ShipHandleCost]">
+              <type name="top" />
+            </field>
+            <field name="[ShipMode]">
+              <type name="top" />
+            </field>
+            <field name="[ShipPriority]">
+              <type name="top" />
+            </field>
+            <field name="[ShipPromo]">
+              <type name="top" />
+            </field>
+            <field name="[SupplierBalance]">
+              <type name="top" />
+            </field>
+            <field name="[SupplierName]">
+              <type name="top" />
+            </field>
+            <field name="[SupplierRegion]">
+              <type name="top" />
+            </field>
+            <field name="[SupplierState]">
+              <type name="top" />
+            </field>
+            <field name="[TaxRate]">
+              <type name="top" />
+            </field>
+            <field name="[TotalCycleTime]">
+              <type name="top" />
+            </field>
+          </schema>
+          <schema>
+          </schema>
+        </type>
+      </relationOp>
+    </projectOp>
+  </aggregateOp>
+</logical-query>

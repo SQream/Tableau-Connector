@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<connector-plugin class="sqream_jdbc" superclass="jdbc" plugin-version="0.0.0" name="SQream DB" version="3.0.0" min-version-tableau="2019.4">
+  <vendor-information>
+      <company name="SQream Technologies" />
+      <support-link url="https://sqream.com" />
+      <driver-download-link url="https://sqream.com/product/client-drivers/" />
+  </vendor-information>
+  <connection-customization class="sqream_jdbc" enabled="true" version="10.0">
+    <vendor name="SQream DB Server" />
+	<driver name="SqreamJDBCDriver" />
+	<customizations>
+	  <customization name="CAP_CONNECT_STORED_PROCEDURE" value="no" />
+	  <customization name="CAP_CREATE_TEMP_TABLES" value="no" />
+	  <customization name="CAP_FAST_METADATA" value="yes" />
+	  <customization name="CAP_MULTIPLE_CONNECTIONS_FROM_SAME_IP" value="yes" />
+	  <customization name="CAP_ODBC_BIND_DETECT_ALIAS_CASE_FOLDING" value="no" />
+	  <customization name="CAP_ODBC_EXPORT_BUFFERS_RESIZABLE" value="yes" />
+	  <customization name="CAP_ODBC_METADATA_SUPPRESS_PREPARED_QUERY" value="yes" />
+	  <customization name="CAP_ODBC_METADATA_SUPPRESS_SQLFOREIGNKEYS_API" value="yes" />
+	  <customization name="CAP_ODBC_METADATA_SUPPRESS_SQLPRIMARYKEYS_API" value="yes" />
+	  <customization name="CAP_ODBC_SUPPRESS_PREPARED_QUERY_FOR_ALL_COMMAND_QUERIES" value="yes" />
+	  <customization name="CAP_ODBC_TRIM_VARCHAR_PADDING" value="yes" />
+	  
+	  <customization name="CAP_QUERY_GROUP_BY_ALIAS" value="no" />
+	  <customization name="CAP_QUERY_GROUP_BY_DEGREE" value="yes" />
+	  <customization name="CAP_QUERY_JOIN_ACROSS_SCHEMAS" value="yes" />
+	  <customization name="CAP_QUERY_BOOLEXPR_TO_INTEXPR" value="no" />
+	  <customization name="CAP_QUERY_SUBQUERIES" value="yes" />
+	  <customization name="CAP_JDBC_QUERY_SUBQUERIES_WITH_TOP" value="no" />
+	  <customization name="CAP_QUERY_SUBQUERY_DATASOURCE_CONTEXT" value="no" />
+	  <customization name="CAP_QUERY_SUBQUERY_QUERY_CONTEXT" value="no" />
+	  <customization name="CAP_QUERY_TOPSTYLE_TOP" value="yes" />
+	  <customization name="CAP_QUERY_TOP_N" value="yes" />
+	  <customization name="CAP_SELECT_INTO" value="no" />
+	  <customization name="CAP_SKIP_CONNECT_VALIDATION" value="yes" />
+	  <customization name="CAP_STORED_PROCEDURE_PREFER_TEMP_TABLE" value="no" />
+	  <customization name="CAP_SUPPRESS_DISPLAY_LIMITATIONS" value="yes" />
+	  <customization name="SQL_SQL_CONFORMANCE" value="1" />
+	  <customization name="CAP_JDBC_METADATA_GET_INDEX_INFO" value="yes" />
+	  <customization name="CAP_JDBC_METADATA_READ_FOREIGNKEYS" value="no" />
+	  <customization name="CAP_JDBC_METADATA_READ_PRIMARYKEYS" value="no" />
+	  <customization name="CAP_JDBC_QUERY_ASYNC" value="yes" />
+	  <customization name="CAP_JDBC_QUERY_CANCEL" value="yes" />
+	</customizations>
+  </connection-customization>
+  <connection-dialog file="connection-dialog.tcd" />
+  <connection-resolver file="connectionResolver.tdr" />
+  <dialect file="dialect.tdd" />
+</connector-plugin>

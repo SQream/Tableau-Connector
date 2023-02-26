@@ -1,0 +1,3189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<logical-query>
+  <selects>
+    <field>[PROD_TYPE1]</field>
+    <field>[SHIP_MODE]</field>
+    <field>[TEMP(attr:LOD - Nesting - 1 (copy):qk)(1075333431)(0)]</field>
+    <field>[TEMP(attr:LOD - Nesting - 1 (copy):qk)(260755027)(0)]</field>
+    <field>[avg:Calculation_8601225013155991:ok]</field>
+    <field>[sum:Calculation_9271225012544475:ok]</field>
+    <field>[sum:LOD - Nesting - 2 (copy):ok]</field>
+    <field>[sum:LOD - Nesting - 3 (copy):ok]</field>
+  </selects>
+  <projectOp class="logical-operator">
+    <expressions>
+      <binding name="[TEMP(attr:LOD - Nesting - 1 (copy):qk)(1075333431)(0)]">
+        <lookupExp class="logical-expression" domain="total">
+          <aggregateOp class="logical-operator">
+            <measures>
+              <binding name="[__measure__1]">
+                <funcallExp class="logical-expression" function="AVG" shape="aggregate">
+                  <lookupExp class="logical-expression" domain="total">
+                    <aggregateOp class="logical-operator">
+                      <measures>
+                        <binding name="[__measure__0]">
+                          <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                            <identifierExp class="logical-expression" identifier="[SALES_TOTAL]" />
+                          </funcallExp>
+                        </binding>
+                      </measures>
+                      <groupbys>
+                        <binding name="[PROD_TYPE1]">
+                          <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                        </binding>
+                        <binding name="[SHIP_MODE]">
+                          <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                        </binding>
+                        <binding name="[PROD_TYPE3]">
+                          <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                        </binding>
+                        <binding name="[PROD_TYPE2]">
+                          <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                        </binding>
+                      </groupbys>
+                      <projectOp class="logical-operator">
+                        <expressions>
+                          <binding name="[PROD_TYPE1]">
+                            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                          </binding>
+                          <binding name="[SHIP_MODE]">
+                            <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                          </binding>
+                        </expressions>
+                        <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+                          <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+                          <cols>
+                          </cols>
+                          <type>
+                            <schema>
+                              <field name="[CALL_CENTER_REGION]">
+                                <type name="top" />
+                              </field>
+                              <field name="[CUSTOMER_BALANCE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[CUSTOMER_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[CUSTOMER_SEGMENT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[CUSTOMER_STATE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[DISCOUNT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[EMPLOYEE_DEPT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[EMPLOYEE_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[EMPLOYEE_SALARY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[EMPLOYEE_YRS_EXP]">
+                                <type name="top" />
+                              </field>
+                              <field name="[FILL_TIME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[GROSS_PROFIT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ITEM_COUNT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[MANAGER_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[MARKET_SEGMENT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_DATE_]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_DAY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_ID]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_MONTH]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_PRIORITY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_QUANTITY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_QUARTER]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_STATUS]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_YEAR]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PID]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRICE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PROD_TYPE1]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PROD_TYPE2]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PROD_TYPE3]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PROD_TYPE4]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_BASE_MARGIN]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_CONTAINER]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_ID]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_IN_STOCK]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[RECEIVE_TIME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[RECEIVED_DATE_]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SALES_TOTAL]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_CHARGE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_DATE_]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_HANDLE_COST]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_MODE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_PRIORITY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_PROMO]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SUPPLIER_BALANCE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SUPPLIER_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SUPPLIER_REGION]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SUPPLIER_STATE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[TAX_RATE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[TOTAL_CYCLE_TIME]">
+                                <type name="top" />
+                              </field>
+                            </schema>
+                            <schema>
+                            </schema>
+                          </type>
+                        </relationOp>
+                      </projectOp>
+                    </aggregateOp>
+                    <indices>
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                      <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                    </indices>
+                    <schema>
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                      <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                    </schema>
+                    <output-value>
+                      <identifierExp class="logical-expression" identifier="[__measure__0]" />
+                    </output-value>
+                    <default-value>
+                      <literalExp class="logical-expression" datatype="real" value="%null%" />
+                    </default-value>
+                  </lookupExp>
+                </funcallExp>
+              </binding>
+            </measures>
+            <groupbys>
+              <binding name="[PROD_TYPE1]">
+                <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+              </binding>
+              <binding name="[SHIP_MODE]">
+                <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+              </binding>
+            </groupbys>
+            <aggregateOp class="logical-operator">
+              <measures>
+              </measures>
+              <groupbys>
+                <binding name="[PROD_TYPE1]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                </binding>
+                <binding name="[SHIP_MODE]">
+                  <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                </binding>
+                <binding name="[PROD_TYPE3]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                </binding>
+                <binding name="[PROD_TYPE2]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                </binding>
+              </groupbys>
+              <projectOp class="logical-operator">
+                <expressions>
+                  <binding name="[PROD_TYPE1]">
+                    <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                  </binding>
+                  <binding name="[SHIP_MODE]">
+                    <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                  </binding>
+                </expressions>
+                <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+                  <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+                  <cols>
+                  </cols>
+                  <type>
+                    <schema>
+                      <field name="[CALL_CENTER_REGION]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_BALANCE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_SEGMENT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_STATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[DISCOUNT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_DEPT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_SALARY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_YRS_EXP]">
+                        <type name="top" />
+                      </field>
+                      <field name="[FILL_TIME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[GROSS_PROFIT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ITEM_COUNT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[MANAGER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[MARKET_SEGMENT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_DAY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_ID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_MONTH]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_PRIORITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_QUANTITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_QUARTER]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_STATUS]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_YEAR]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRICE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE1]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE2]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE3]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE4]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_BASE_MARGIN]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_CONTAINER]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_ID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_IN_STOCK]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[RECEIVE_TIME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[RECEIVED_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SALES_TOTAL]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_CHARGE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_HANDLE_COST]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_MODE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_PRIORITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_PROMO]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_BALANCE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_REGION]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_STATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[TAX_RATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[TOTAL_CYCLE_TIME]">
+                        <type name="top" />
+                      </field>
+                    </schema>
+                    <schema>
+                    </schema>
+                  </type>
+                </relationOp>
+              </projectOp>
+            </aggregateOp>
+          </aggregateOp>
+          <indices>
+            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+            <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+          </indices>
+          <schema>
+            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+            <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+          </schema>
+          <output-value>
+            <identifierExp class="logical-expression" identifier="[__measure__1]" />
+          </output-value>
+          <default-value>
+            <literalExp class="logical-expression" datatype="real" value="%null%" />
+          </default-value>
+        </lookupExp>
+      </binding>
+      <binding name="[TEMP(attr:LOD - Nesting - 1 (copy):qk)(260755027)(0)]">
+        <lookupExp class="logical-expression" domain="total">
+          <aggregateOp class="logical-operator">
+            <measures>
+              <binding name="[__measure__3]">
+                <funcallExp class="logical-expression" function="AVG" shape="aggregate">
+                  <lookupExp class="logical-expression" domain="total">
+                    <aggregateOp class="logical-operator">
+                      <measures>
+                        <binding name="[__measure__2]">
+                          <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                            <identifierExp class="logical-expression" identifier="[SALES_TOTAL]" />
+                          </funcallExp>
+                        </binding>
+                      </measures>
+                      <groupbys>
+                        <binding name="[PROD_TYPE1]">
+                          <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                        </binding>
+                        <binding name="[SHIP_MODE]">
+                          <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                        </binding>
+                        <binding name="[PROD_TYPE3]">
+                          <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                        </binding>
+                        <binding name="[PROD_TYPE2]">
+                          <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                        </binding>
+                      </groupbys>
+                      <projectOp class="logical-operator">
+                        <expressions>
+                          <binding name="[PROD_TYPE1]">
+                            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                          </binding>
+                          <binding name="[SHIP_MODE]">
+                            <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                          </binding>
+                        </expressions>
+                        <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+                          <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+                          <cols>
+                          </cols>
+                          <type>
+                            <schema>
+                              <field name="[CALL_CENTER_REGION]">
+                                <type name="top" />
+                              </field>
+                              <field name="[CUSTOMER_BALANCE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[CUSTOMER_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[CUSTOMER_SEGMENT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[CUSTOMER_STATE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[DISCOUNT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[EMPLOYEE_DEPT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[EMPLOYEE_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[EMPLOYEE_SALARY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[EMPLOYEE_YRS_EXP]">
+                                <type name="top" />
+                              </field>
+                              <field name="[FILL_TIME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[GROSS_PROFIT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ITEM_COUNT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[MANAGER_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[MARKET_SEGMENT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_DATE_]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_DAY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_ID]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_MONTH]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_PRIORITY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_QUANTITY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_QUARTER]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_STATUS]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_YEAR]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PID]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRICE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PROD_TYPE1]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PROD_TYPE2]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PROD_TYPE3]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PROD_TYPE4]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_BASE_MARGIN]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_CONTAINER]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_ID]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_IN_STOCK]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[RECEIVE_TIME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[RECEIVED_DATE_]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SALES_TOTAL]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_CHARGE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_DATE_]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_HANDLE_COST]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_MODE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_PRIORITY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_PROMO]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SUPPLIER_BALANCE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SUPPLIER_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SUPPLIER_REGION]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SUPPLIER_STATE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[TAX_RATE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[TOTAL_CYCLE_TIME]">
+                                <type name="top" />
+                              </field>
+                            </schema>
+                            <schema>
+                            </schema>
+                          </type>
+                        </relationOp>
+                      </projectOp>
+                    </aggregateOp>
+                    <indices>
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                      <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                    </indices>
+                    <schema>
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                      <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                    </schema>
+                    <output-value>
+                      <identifierExp class="logical-expression" identifier="[__measure__2]" />
+                    </output-value>
+                    <default-value>
+                      <literalExp class="logical-expression" datatype="real" value="%null%" />
+                    </default-value>
+                  </lookupExp>
+                </funcallExp>
+              </binding>
+            </measures>
+            <groupbys>
+              <binding name="[PROD_TYPE1]">
+                <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+              </binding>
+              <binding name="[SHIP_MODE]">
+                <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+              </binding>
+            </groupbys>
+            <aggregateOp class="logical-operator">
+              <measures>
+              </measures>
+              <groupbys>
+                <binding name="[PROD_TYPE1]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                </binding>
+                <binding name="[SHIP_MODE]">
+                  <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                </binding>
+                <binding name="[PROD_TYPE3]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                </binding>
+                <binding name="[PROD_TYPE2]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                </binding>
+              </groupbys>
+              <projectOp class="logical-operator">
+                <expressions>
+                  <binding name="[PROD_TYPE1]">
+                    <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                  </binding>
+                  <binding name="[SHIP_MODE]">
+                    <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                  </binding>
+                </expressions>
+                <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+                  <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+                  <cols>
+                  </cols>
+                  <type>
+                    <schema>
+                      <field name="[CALL_CENTER_REGION]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_BALANCE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_SEGMENT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_STATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[DISCOUNT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_DEPT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_SALARY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_YRS_EXP]">
+                        <type name="top" />
+                      </field>
+                      <field name="[FILL_TIME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[GROSS_PROFIT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ITEM_COUNT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[MANAGER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[MARKET_SEGMENT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_DAY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_ID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_MONTH]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_PRIORITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_QUANTITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_QUARTER]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_STATUS]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_YEAR]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRICE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE1]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE2]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE3]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE4]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_BASE_MARGIN]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_CONTAINER]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_ID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_IN_STOCK]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[RECEIVE_TIME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[RECEIVED_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SALES_TOTAL]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_CHARGE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_HANDLE_COST]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_MODE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_PRIORITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_PROMO]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_BALANCE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_REGION]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_STATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[TAX_RATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[TOTAL_CYCLE_TIME]">
+                        <type name="top" />
+                      </field>
+                    </schema>
+                    <schema>
+                    </schema>
+                  </type>
+                </relationOp>
+              </projectOp>
+            </aggregateOp>
+          </aggregateOp>
+          <indices>
+            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+            <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+          </indices>
+          <schema>
+            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+            <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+          </schema>
+          <output-value>
+            <identifierExp class="logical-expression" identifier="[__measure__3]" />
+          </output-value>
+          <default-value>
+            <literalExp class="logical-expression" datatype="real" value="%null%" />
+          </default-value>
+        </lookupExp>
+      </binding>
+      <binding name="[sum:Calculation_9271225012544475:ok]">
+        <lookupExp class="logical-expression" domain="total">
+          <aggregateOp class="logical-operator">
+            <measures>
+              <binding name="[__measure__10]">
+                <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                  <funcallExp class="logical-expression" function="float" shape="scalar">
+                    <lookupExp class="logical-expression" domain="total">
+                      <aggregateOp class="logical-operator">
+                        <measures>
+                          <binding name="[__measure__9]">
+                            <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                              <identifierExp class="logical-expression" identifier="[SALES_TOTAL]" />
+                            </funcallExp>
+                          </binding>
+                        </measures>
+                        <groupbys>
+                          <binding name="[PROD_TYPE1]">
+                            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                          </binding>
+                          <binding name="[SHIP_MODE]">
+                            <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                          </binding>
+                        </groupbys>
+                        <projectOp class="logical-operator">
+                          <expressions>
+                            <binding name="[PROD_TYPE1]">
+                              <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                            </binding>
+                            <binding name="[SHIP_MODE]">
+                              <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                            </binding>
+                          </expressions>
+                          <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+                            <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+                            <cols>
+                            </cols>
+                            <type>
+                              <schema>
+                                <field name="[CALL_CENTER_REGION]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_BALANCE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_SEGMENT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_STATE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[DISCOUNT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_DEPT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_SALARY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_YRS_EXP]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[FILL_TIME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[GROSS_PROFIT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ITEM_COUNT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[MANAGER_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[MARKET_SEGMENT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_DATE_]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_DAY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_ID]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_MONTH]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_PRIORITY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_QUANTITY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_QUARTER]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_STATUS]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_YEAR]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PID]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRICE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE1]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE2]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE3]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE4]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_BASE_MARGIN]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_CONTAINER]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_ID]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_IN_STOCK]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[RECEIVE_TIME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[RECEIVED_DATE_]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SALES_TOTAL]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_CHARGE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_DATE_]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_HANDLE_COST]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_MODE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_PRIORITY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_PROMO]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_BALANCE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_REGION]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_STATE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[TAX_RATE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[TOTAL_CYCLE_TIME]">
+                                  <type name="top" />
+                                </field>
+                              </schema>
+                              <schema>
+                              </schema>
+                            </type>
+                          </relationOp>
+                        </projectOp>
+                      </aggregateOp>
+                      <indices>
+                        <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                        <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                      </indices>
+                      <schema>
+                        <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                        <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                      </schema>
+                      <output-value>
+                        <identifierExp class="logical-expression" identifier="[__measure__9]" />
+                      </output-value>
+                      <default-value>
+                        <literalExp class="logical-expression" datatype="real" value="%null%" />
+                      </default-value>
+                    </lookupExp>
+                  </funcallExp>
+                </funcallExp>
+              </binding>
+            </measures>
+            <groupbys>
+              <binding name="[PROD_TYPE1]">
+                <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+              </binding>
+              <binding name="[SHIP_MODE]">
+                <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+              </binding>
+            </groupbys>
+            <aggregateOp class="logical-operator">
+              <measures>
+              </measures>
+              <groupbys>
+                <binding name="[PROD_TYPE1]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                </binding>
+                <binding name="[SHIP_MODE]">
+                  <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                </binding>
+                <binding name="[PROD_TYPE2]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                </binding>
+                <binding name="[PROD_TYPE3]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                </binding>
+              </groupbys>
+              <projectOp class="logical-operator">
+                <expressions>
+                  <binding name="[PROD_TYPE1]">
+                    <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                  </binding>
+                  <binding name="[SHIP_MODE]">
+                    <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                  </binding>
+                </expressions>
+                <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+                  <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+                  <cols>
+                  </cols>
+                  <type>
+                    <schema>
+                      <field name="[CALL_CENTER_REGION]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_BALANCE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_SEGMENT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_STATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[DISCOUNT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_DEPT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_SALARY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_YRS_EXP]">
+                        <type name="top" />
+                      </field>
+                      <field name="[FILL_TIME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[GROSS_PROFIT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ITEM_COUNT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[MANAGER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[MARKET_SEGMENT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_DAY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_ID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_MONTH]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_PRIORITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_QUANTITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_QUARTER]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_STATUS]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_YEAR]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRICE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE1]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE2]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE3]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE4]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_BASE_MARGIN]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_CONTAINER]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_ID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_IN_STOCK]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[RECEIVE_TIME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[RECEIVED_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SALES_TOTAL]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_CHARGE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_HANDLE_COST]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_MODE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_PRIORITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_PROMO]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_BALANCE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_REGION]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_STATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[TAX_RATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[TOTAL_CYCLE_TIME]">
+                        <type name="top" />
+                      </field>
+                    </schema>
+                    <schema>
+                    </schema>
+                  </type>
+                </relationOp>
+              </projectOp>
+            </aggregateOp>
+          </aggregateOp>
+          <indices>
+            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+            <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+          </indices>
+          <schema>
+            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+            <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+          </schema>
+          <output-value>
+            <identifierExp class="logical-expression" identifier="[__measure__10]" />
+          </output-value>
+          <default-value>
+            <literalExp class="logical-expression" datatype="real" value="%null%" />
+          </default-value>
+        </lookupExp>
+      </binding>
+      <binding name="[sum:LOD - Nesting - 2 (copy):ok]">
+        <lookupExp class="logical-expression" domain="total">
+          <aggregateOp class="logical-operator">
+            <measures>
+              <binding name="[__measure__12]">
+                <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                  <funcallExp class="logical-expression" function="float" shape="scalar">
+                    <lookupExp class="logical-expression" domain="total">
+                      <aggregateOp class="logical-operator">
+                        <measures>
+                          <binding name="[__measure__11]">
+                            <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                              <identifierExp class="logical-expression" identifier="[SALES_TOTAL]" />
+                            </funcallExp>
+                          </binding>
+                        </measures>
+                        <groupbys>
+                          <binding name="[PROD_TYPE1]">
+                            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                          </binding>
+                        </groupbys>
+                        <projectOp class="logical-operator">
+                          <expressions>
+                            <binding name="[PROD_TYPE1]">
+                              <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                            </binding>
+                            <binding name="[SHIP_MODE]">
+                              <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                            </binding>
+                          </expressions>
+                          <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+                            <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+                            <cols>
+                            </cols>
+                            <type>
+                              <schema>
+                                <field name="[CALL_CENTER_REGION]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_BALANCE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_SEGMENT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_STATE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[DISCOUNT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_DEPT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_SALARY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_YRS_EXP]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[FILL_TIME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[GROSS_PROFIT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ITEM_COUNT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[MANAGER_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[MARKET_SEGMENT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_DATE_]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_DAY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_ID]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_MONTH]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_PRIORITY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_QUANTITY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_QUARTER]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_STATUS]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_YEAR]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PID]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRICE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE1]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE2]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE3]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE4]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_BASE_MARGIN]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_CONTAINER]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_ID]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_IN_STOCK]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[RECEIVE_TIME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[RECEIVED_DATE_]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SALES_TOTAL]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_CHARGE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_DATE_]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_HANDLE_COST]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_MODE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_PRIORITY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_PROMO]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_BALANCE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_REGION]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_STATE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[TAX_RATE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[TOTAL_CYCLE_TIME]">
+                                  <type name="top" />
+                                </field>
+                              </schema>
+                              <schema>
+                              </schema>
+                            </type>
+                          </relationOp>
+                        </projectOp>
+                      </aggregateOp>
+                      <indices>
+                        <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                      </indices>
+                      <schema>
+                        <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                      </schema>
+                      <output-value>
+                        <identifierExp class="logical-expression" identifier="[__measure__11]" />
+                      </output-value>
+                      <default-value>
+                        <literalExp class="logical-expression" datatype="real" value="%null%" />
+                      </default-value>
+                    </lookupExp>
+                  </funcallExp>
+                </funcallExp>
+              </binding>
+            </measures>
+            <groupbys>
+              <binding name="[PROD_TYPE1]">
+                <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+              </binding>
+              <binding name="[SHIP_MODE]">
+                <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+              </binding>
+            </groupbys>
+            <aggregateOp class="logical-operator">
+              <measures>
+              </measures>
+              <groupbys>
+                <binding name="[PROD_TYPE1]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                </binding>
+                <binding name="[PROD_TYPE2]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                </binding>
+                <binding name="[PROD_TYPE3]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                </binding>
+                <binding name="[SHIP_MODE]">
+                  <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                </binding>
+              </groupbys>
+              <projectOp class="logical-operator">
+                <expressions>
+                  <binding name="[PROD_TYPE1]">
+                    <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                  </binding>
+                  <binding name="[SHIP_MODE]">
+                    <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                  </binding>
+                </expressions>
+                <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+                  <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+                  <cols>
+                  </cols>
+                  <type>
+                    <schema>
+                      <field name="[CALL_CENTER_REGION]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_BALANCE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_SEGMENT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_STATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[DISCOUNT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_DEPT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_SALARY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_YRS_EXP]">
+                        <type name="top" />
+                      </field>
+                      <field name="[FILL_TIME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[GROSS_PROFIT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ITEM_COUNT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[MANAGER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[MARKET_SEGMENT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_DAY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_ID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_MONTH]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_PRIORITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_QUANTITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_QUARTER]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_STATUS]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_YEAR]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRICE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE1]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE2]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE3]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE4]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_BASE_MARGIN]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_CONTAINER]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_ID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_IN_STOCK]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[RECEIVE_TIME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[RECEIVED_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SALES_TOTAL]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_CHARGE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_HANDLE_COST]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_MODE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_PRIORITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_PROMO]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_BALANCE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_REGION]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_STATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[TAX_RATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[TOTAL_CYCLE_TIME]">
+                        <type name="top" />
+                      </field>
+                    </schema>
+                    <schema>
+                    </schema>
+                  </type>
+                </relationOp>
+              </projectOp>
+            </aggregateOp>
+          </aggregateOp>
+          <indices>
+            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+            <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+          </indices>
+          <schema>
+            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+            <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+          </schema>
+          <output-value>
+            <identifierExp class="logical-expression" identifier="[__measure__12]" />
+          </output-value>
+          <default-value>
+            <literalExp class="logical-expression" datatype="real" value="%null%" />
+          </default-value>
+        </lookupExp>
+      </binding>
+      <binding name="[sum:LOD - Nesting - 3 (copy):ok]">
+        <lookupExp class="logical-expression" domain="total">
+          <aggregateOp class="logical-operator">
+            <measures>
+              <binding name="[__measure__14]">
+                <funcallExp class="logical-expression" function="AVG" shape="aggregate">
+                  <lookupExp class="logical-expression" domain="total">
+                    <aggregateOp class="logical-operator">
+                      <measures>
+                        <binding name="[__measure__13]">
+                          <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                            <identifierExp class="logical-expression" identifier="[SALES_TOTAL]" />
+                          </funcallExp>
+                        </binding>
+                      </measures>
+                      <groupbys>
+                        <binding name="[PROD_TYPE1]">
+                          <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                        </binding>
+                        <binding name="[PROD_TYPE3]">
+                          <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                        </binding>
+                        <binding name="[PROD_TYPE2]">
+                          <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                        </binding>
+                      </groupbys>
+                      <projectOp class="logical-operator">
+                        <expressions>
+                          <binding name="[PROD_TYPE1]">
+                            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                          </binding>
+                          <binding name="[SHIP_MODE]">
+                            <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                          </binding>
+                        </expressions>
+                        <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+                          <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+                          <cols>
+                          </cols>
+                          <type>
+                            <schema>
+                              <field name="[CALL_CENTER_REGION]">
+                                <type name="top" />
+                              </field>
+                              <field name="[CUSTOMER_BALANCE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[CUSTOMER_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[CUSTOMER_SEGMENT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[CUSTOMER_STATE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[DISCOUNT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[EMPLOYEE_DEPT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[EMPLOYEE_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[EMPLOYEE_SALARY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[EMPLOYEE_YRS_EXP]">
+                                <type name="top" />
+                              </field>
+                              <field name="[FILL_TIME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[GROSS_PROFIT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ITEM_COUNT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[MANAGER_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[MARKET_SEGMENT]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_DATE_]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_DAY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_ID]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_MONTH]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_PRIORITY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_QUANTITY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_QUARTER]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_STATUS]">
+                                <type name="top" />
+                              </field>
+                              <field name="[ORDER_YEAR]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PID]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRICE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PROD_TYPE1]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PROD_TYPE2]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PROD_TYPE3]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PROD_TYPE4]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_BASE_MARGIN]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_CONTAINER]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_ID]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_IN_STOCK]">
+                                <type name="top" />
+                              </field>
+                              <field name="[PRODUCT_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[RECEIVE_TIME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[RECEIVED_DATE_]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SALES_TOTAL]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_CHARGE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_DATE_]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_HANDLE_COST]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_MODE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_PRIORITY]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SHIP_PROMO]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SUPPLIER_BALANCE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SUPPLIER_NAME]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SUPPLIER_REGION]">
+                                <type name="top" />
+                              </field>
+                              <field name="[SUPPLIER_STATE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[TAX_RATE]">
+                                <type name="top" />
+                              </field>
+                              <field name="[TOTAL_CYCLE_TIME]">
+                                <type name="top" />
+                              </field>
+                            </schema>
+                            <schema>
+                            </schema>
+                          </type>
+                        </relationOp>
+                      </projectOp>
+                    </aggregateOp>
+                    <indices>
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                    </indices>
+                    <schema>
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                    </schema>
+                    <output-value>
+                      <identifierExp class="logical-expression" identifier="[__measure__13]" />
+                    </output-value>
+                    <default-value>
+                      <literalExp class="logical-expression" datatype="real" value="%null%" />
+                    </default-value>
+                  </lookupExp>
+                </funcallExp>
+              </binding>
+            </measures>
+            <groupbys>
+              <binding name="[PROD_TYPE1]">
+                <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+              </binding>
+            </groupbys>
+            <aggregateOp class="logical-operator">
+              <measures>
+              </measures>
+              <groupbys>
+                <binding name="[PROD_TYPE1]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                </binding>
+                <binding name="[PROD_TYPE3]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                </binding>
+                <binding name="[PROD_TYPE2]">
+                  <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                </binding>
+              </groupbys>
+              <projectOp class="logical-operator">
+                <expressions>
+                  <binding name="[PROD_TYPE1]">
+                    <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                  </binding>
+                  <binding name="[SHIP_MODE]">
+                    <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                  </binding>
+                </expressions>
+                <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+                  <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+                  <cols>
+                  </cols>
+                  <type>
+                    <schema>
+                      <field name="[CALL_CENTER_REGION]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_BALANCE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_SEGMENT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[CUSTOMER_STATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[DISCOUNT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_DEPT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_SALARY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[EMPLOYEE_YRS_EXP]">
+                        <type name="top" />
+                      </field>
+                      <field name="[FILL_TIME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[GROSS_PROFIT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ITEM_COUNT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[MANAGER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[MARKET_SEGMENT]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_DAY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_ID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_MONTH]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_PRIORITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_QUANTITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_QUARTER]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_STATUS]">
+                        <type name="top" />
+                      </field>
+                      <field name="[ORDER_YEAR]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRICE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE1]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE2]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE3]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PROD_TYPE4]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_BASE_MARGIN]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_CONTAINER]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_ID]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_IN_STOCK]">
+                        <type name="top" />
+                      </field>
+                      <field name="[PRODUCT_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[RECEIVE_TIME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[RECEIVED_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SALES_TOTAL]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_CHARGE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_DATE_]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_HANDLE_COST]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_MODE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_PRIORITY]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SHIP_PROMO]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_BALANCE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_NAME]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_REGION]">
+                        <type name="top" />
+                      </field>
+                      <field name="[SUPPLIER_STATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[TAX_RATE]">
+                        <type name="top" />
+                      </field>
+                      <field name="[TOTAL_CYCLE_TIME]">
+                        <type name="top" />
+                      </field>
+                    </schema>
+                    <schema>
+                    </schema>
+                  </type>
+                </relationOp>
+              </projectOp>
+            </aggregateOp>
+          </aggregateOp>
+          <indices>
+            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+          </indices>
+          <schema>
+            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+          </schema>
+          <output-value>
+            <identifierExp class="logical-expression" identifier="[__measure__14]" />
+          </output-value>
+          <default-value>
+            <literalExp class="logical-expression" datatype="real" value="%null%" />
+          </default-value>
+        </lookupExp>
+      </binding>
+    </expressions>
+    <aggregateOp class="logical-operator">
+      <measures>
+        <binding name="[avg:Calculation_8601225013155991:ok]">
+          <funcallExp class="logical-expression" function="AVG" shape="aggregate">
+            <funcallExp class="logical-expression" function="/" shape="scalar">
+              <funcallExp class="logical-expression" function="+" shape="scalar">
+                <funcallExp class="logical-expression" function="+" shape="scalar">
+                  <lookupExp class="logical-expression" domain="total">
+                    <aggregateOp class="logical-operator">
+                      <measures>
+                        <binding name="[__measure__5]">
+                          <funcallExp class="logical-expression" function="AVG" shape="aggregate">
+                            <lookupExp class="logical-expression" domain="total">
+                              <aggregateOp class="logical-operator">
+                                <measures>
+                                  <binding name="[__measure__4]">
+                                    <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                                      <identifierExp class="logical-expression" identifier="[SALES_TOTAL]" />
+                                    </funcallExp>
+                                  </binding>
+                                </measures>
+                                <groupbys>
+                                  <binding name="[PROD_TYPE1]">
+                                    <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                                  </binding>
+                                  <binding name="[PROD_TYPE3]">
+                                    <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                                  </binding>
+                                  <binding name="[PROD_TYPE2]">
+                                    <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                                  </binding>
+                                </groupbys>
+                                <projectOp class="logical-operator">
+                                  <expressions>
+                                    <binding name="[PROD_TYPE1]">
+                                      <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                                    </binding>
+                                    <binding name="[SHIP_MODE]">
+                                      <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                                    </binding>
+                                  </expressions>
+                                  <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+                                    <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+                                    <cols>
+                                    </cols>
+                                    <type>
+                                      <schema>
+                                        <field name="[CALL_CENTER_REGION]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[CUSTOMER_BALANCE]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[CUSTOMER_NAME]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[CUSTOMER_SEGMENT]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[CUSTOMER_STATE]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[DISCOUNT]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[EMPLOYEE_DEPT]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[EMPLOYEE_NAME]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[EMPLOYEE_SALARY]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[EMPLOYEE_YRS_EXP]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[FILL_TIME]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[GROSS_PROFIT]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ITEM_COUNT]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[MANAGER_NAME]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[MARKET_SEGMENT]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ORDER_DATE_]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ORDER_DAY]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ORDER_ID]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ORDER_MONTH]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ORDER_PRIORITY]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ORDER_QUANTITY]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ORDER_QUARTER]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ORDER_STATUS]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[ORDER_YEAR]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[PID]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[PRICE]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[PROD_TYPE1]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[PROD_TYPE2]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[PROD_TYPE3]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[PROD_TYPE4]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[PRODUCT_BASE_MARGIN]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[PRODUCT_CONTAINER]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[PRODUCT_ID]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[PRODUCT_IN_STOCK]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[PRODUCT_NAME]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[RECEIVE_TIME]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[RECEIVED_DATE_]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[SALES_TOTAL]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[SHIP_CHARGE]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[SHIP_DATE_]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[SHIP_HANDLE_COST]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[SHIP_MODE]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[SHIP_PRIORITY]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[SHIP_PROMO]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[SUPPLIER_BALANCE]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[SUPPLIER_NAME]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[SUPPLIER_REGION]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[SUPPLIER_STATE]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[TAX_RATE]">
+                                          <type name="top" />
+                                        </field>
+                                        <field name="[TOTAL_CYCLE_TIME]">
+                                          <type name="top" />
+                                        </field>
+                                      </schema>
+                                      <schema>
+                                      </schema>
+                                    </type>
+                                  </relationOp>
+                                </projectOp>
+                              </aggregateOp>
+                              <indices>
+                                <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                                <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                                <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                              </indices>
+                              <schema>
+                                <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                                <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                                <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                              </schema>
+                              <output-value>
+                                <identifierExp class="logical-expression" identifier="[__measure__4]" />
+                              </output-value>
+                              <default-value>
+                                <literalExp class="logical-expression" datatype="real" value="%null%" />
+                              </default-value>
+                            </lookupExp>
+                          </funcallExp>
+                        </binding>
+                      </measures>
+                      <groupbys>
+                        <binding name="[PROD_TYPE1]">
+                          <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                        </binding>
+                      </groupbys>
+                      <aggregateOp class="logical-operator">
+                        <measures>
+                        </measures>
+                        <groupbys>
+                          <binding name="[PROD_TYPE1]">
+                            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                          </binding>
+                          <binding name="[PROD_TYPE3]">
+                            <identifierExp class="logical-expression" identifier="[PROD_TYPE3]" />
+                          </binding>
+                          <binding name="[PROD_TYPE2]">
+                            <identifierExp class="logical-expression" identifier="[PROD_TYPE2]" />
+                          </binding>
+                        </groupbys>
+                        <projectOp class="logical-operator">
+                          <expressions>
+                            <binding name="[PROD_TYPE1]">
+                              <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                            </binding>
+                            <binding name="[SHIP_MODE]">
+                              <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                            </binding>
+                          </expressions>
+                          <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+                            <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+                            <cols>
+                            </cols>
+                            <type>
+                              <schema>
+                                <field name="[CALL_CENTER_REGION]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_BALANCE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_SEGMENT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_STATE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[DISCOUNT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_DEPT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_SALARY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_YRS_EXP]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[FILL_TIME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[GROSS_PROFIT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ITEM_COUNT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[MANAGER_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[MARKET_SEGMENT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_DATE_]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_DAY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_ID]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_MONTH]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_PRIORITY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_QUANTITY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_QUARTER]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_STATUS]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_YEAR]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PID]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRICE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE1]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE2]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE3]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE4]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_BASE_MARGIN]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_CONTAINER]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_ID]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_IN_STOCK]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[RECEIVE_TIME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[RECEIVED_DATE_]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SALES_TOTAL]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_CHARGE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_DATE_]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_HANDLE_COST]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_MODE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_PRIORITY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_PROMO]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_BALANCE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_REGION]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_STATE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[TAX_RATE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[TOTAL_CYCLE_TIME]">
+                                  <type name="top" />
+                                </field>
+                              </schema>
+                              <schema>
+                              </schema>
+                            </type>
+                          </relationOp>
+                        </projectOp>
+                      </aggregateOp>
+                    </aggregateOp>
+                    <indices>
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                    </indices>
+                    <schema>
+                      <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                    </schema>
+                    <output-value>
+                      <identifierExp class="logical-expression" identifier="[__measure__5]" />
+                    </output-value>
+                    <default-value>
+                      <literalExp class="logical-expression" datatype="real" value="%null%" />
+                    </default-value>
+                  </lookupExp>
+                  <funcallExp class="logical-expression" function="float" shape="scalar">
+                    <lookupExp class="logical-expression" domain="total">
+                      <aggregateOp class="logical-operator">
+                        <measures>
+                          <binding name="[__measure__6]">
+                            <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                              <identifierExp class="logical-expression" identifier="[SALES_TOTAL]" />
+                            </funcallExp>
+                          </binding>
+                        </measures>
+                        <groupbys>
+                          <binding name="[PROD_TYPE1]">
+                            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                          </binding>
+                          <binding name="[SHIP_MODE]">
+                            <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                          </binding>
+                        </groupbys>
+                        <projectOp class="logical-operator">
+                          <expressions>
+                            <binding name="[PROD_TYPE1]">
+                              <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                            </binding>
+                            <binding name="[SHIP_MODE]">
+                              <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                            </binding>
+                          </expressions>
+                          <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+                            <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+                            <cols>
+                            </cols>
+                            <type>
+                              <schema>
+                                <field name="[CALL_CENTER_REGION]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_BALANCE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_SEGMENT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[CUSTOMER_STATE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[DISCOUNT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_DEPT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_SALARY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[EMPLOYEE_YRS_EXP]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[FILL_TIME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[GROSS_PROFIT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ITEM_COUNT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[MANAGER_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[MARKET_SEGMENT]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_DATE_]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_DAY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_ID]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_MONTH]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_PRIORITY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_QUANTITY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_QUARTER]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_STATUS]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[ORDER_YEAR]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PID]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRICE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE1]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE2]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE3]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PROD_TYPE4]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_BASE_MARGIN]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_CONTAINER]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_ID]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_IN_STOCK]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[PRODUCT_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[RECEIVE_TIME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[RECEIVED_DATE_]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SALES_TOTAL]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_CHARGE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_DATE_]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_HANDLE_COST]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_MODE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_PRIORITY]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SHIP_PROMO]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_BALANCE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_NAME]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_REGION]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[SUPPLIER_STATE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[TAX_RATE]">
+                                  <type name="top" />
+                                </field>
+                                <field name="[TOTAL_CYCLE_TIME]">
+                                  <type name="top" />
+                                </field>
+                              </schema>
+                              <schema>
+                              </schema>
+                            </type>
+                          </relationOp>
+                        </projectOp>
+                      </aggregateOp>
+                      <indices>
+                        <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                        <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                      </indices>
+                      <schema>
+                        <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                        <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                      </schema>
+                      <output-value>
+                        <identifierExp class="logical-expression" identifier="[__measure__6]" />
+                      </output-value>
+                      <default-value>
+                        <literalExp class="logical-expression" datatype="real" value="%null%" />
+                      </default-value>
+                    </lookupExp>
+                  </funcallExp>
+                </funcallExp>
+                <identifierExp class="logical-expression" identifier="[SALES_TOTAL]" />
+              </funcallExp>
+              <lookupExp class="logical-expression" domain="total">
+                <aggregateOp class="logical-operator">
+                  <measures>
+                    <binding name="[__measure__7]">
+                      <funcallExp class="logical-expression" function="SUM" shape="aggregate">
+                        <identifierExp class="logical-expression" identifier="[PRODUCT_BASE_MARGIN]" />
+                      </funcallExp>
+                    </binding>
+                  </measures>
+                  <groupbys>
+                    <binding name="[MARKET_SEGMENT]">
+                      <identifierExp class="logical-expression" identifier="[MARKET_SEGMENT]" />
+                    </binding>
+                  </groupbys>
+                  <projectOp class="logical-operator">
+                    <expressions>
+                      <binding name="[PROD_TYPE1]">
+                        <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+                      </binding>
+                      <binding name="[SHIP_MODE]">
+                        <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+                      </binding>
+                    </expressions>
+                    <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+                      <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+                      <cols>
+                      </cols>
+                      <type>
+                        <schema>
+                          <field name="[CALL_CENTER_REGION]">
+                            <type name="top" />
+                          </field>
+                          <field name="[CUSTOMER_BALANCE]">
+                            <type name="top" />
+                          </field>
+                          <field name="[CUSTOMER_NAME]">
+                            <type name="top" />
+                          </field>
+                          <field name="[CUSTOMER_SEGMENT]">
+                            <type name="top" />
+                          </field>
+                          <field name="[CUSTOMER_STATE]">
+                            <type name="top" />
+                          </field>
+                          <field name="[DISCOUNT]">
+                            <type name="top" />
+                          </field>
+                          <field name="[EMPLOYEE_DEPT]">
+                            <type name="top" />
+                          </field>
+                          <field name="[EMPLOYEE_NAME]">
+                            <type name="top" />
+                          </field>
+                          <field name="[EMPLOYEE_SALARY]">
+                            <type name="top" />
+                          </field>
+                          <field name="[EMPLOYEE_YRS_EXP]">
+                            <type name="top" />
+                          </field>
+                          <field name="[FILL_TIME]">
+                            <type name="top" />
+                          </field>
+                          <field name="[GROSS_PROFIT]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ITEM_COUNT]">
+                            <type name="top" />
+                          </field>
+                          <field name="[MANAGER_NAME]">
+                            <type name="top" />
+                          </field>
+                          <field name="[MARKET_SEGMENT]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ORDER_DATE_]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ORDER_DAY]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ORDER_ID]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ORDER_MONTH]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ORDER_PRIORITY]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ORDER_QUANTITY]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ORDER_QUARTER]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ORDER_STATUS]">
+                            <type name="top" />
+                          </field>
+                          <field name="[ORDER_YEAR]">
+                            <type name="top" />
+                          </field>
+                          <field name="[PID]">
+                            <type name="top" />
+                          </field>
+                          <field name="[PRICE]">
+                            <type name="top" />
+                          </field>
+                          <field name="[PROD_TYPE1]">
+                            <type name="top" />
+                          </field>
+                          <field name="[PROD_TYPE2]">
+                            <type name="top" />
+                          </field>
+                          <field name="[PROD_TYPE3]">
+                            <type name="top" />
+                          </field>
+                          <field name="[PROD_TYPE4]">
+                            <type name="top" />
+                          </field>
+                          <field name="[PRODUCT_BASE_MARGIN]">
+                            <type name="top" />
+                          </field>
+                          <field name="[PRODUCT_CONTAINER]">
+                            <type name="top" />
+                          </field>
+                          <field name="[PRODUCT_ID]">
+                            <type name="top" />
+                          </field>
+                          <field name="[PRODUCT_IN_STOCK]">
+                            <type name="top" />
+                          </field>
+                          <field name="[PRODUCT_NAME]">
+                            <type name="top" />
+                          </field>
+                          <field name="[RECEIVE_TIME]">
+                            <type name="top" />
+                          </field>
+                          <field name="[RECEIVED_DATE_]">
+                            <type name="top" />
+                          </field>
+                          <field name="[SALES_TOTAL]">
+                            <type name="top" />
+                          </field>
+                          <field name="[SHIP_CHARGE]">
+                            <type name="top" />
+                          </field>
+                          <field name="[SHIP_DATE_]">
+                            <type name="top" />
+                          </field>
+                          <field name="[SHIP_HANDLE_COST]">
+                            <type name="top" />
+                          </field>
+                          <field name="[SHIP_MODE]">
+                            <type name="top" />
+                          </field>
+                          <field name="[SHIP_PRIORITY]">
+                            <type name="top" />
+                          </field>
+                          <field name="[SHIP_PROMO]">
+                            <type name="top" />
+                          </field>
+                          <field name="[SUPPLIER_BALANCE]">
+                            <type name="top" />
+                          </field>
+                          <field name="[SUPPLIER_NAME]">
+                            <type name="top" />
+                          </field>
+                          <field name="[SUPPLIER_REGION]">
+                            <type name="top" />
+                          </field>
+                          <field name="[SUPPLIER_STATE]">
+                            <type name="top" />
+                          </field>
+                          <field name="[TAX_RATE]">
+                            <type name="top" />
+                          </field>
+                          <field name="[TOTAL_CYCLE_TIME]">
+                            <type name="top" />
+                          </field>
+                        </schema>
+                        <schema>
+                        </schema>
+                      </type>
+                    </relationOp>
+                  </projectOp>
+                </aggregateOp>
+                <indices>
+                  <identifierExp class="logical-expression" identifier="[MARKET_SEGMENT]" />
+                </indices>
+                <schema>
+                  <identifierExp class="logical-expression" identifier="[MARKET_SEGMENT]" />
+                </schema>
+                <output-value>
+                  <identifierExp class="logical-expression" identifier="[__measure__7]" />
+                </output-value>
+                <default-value>
+                  <literalExp class="logical-expression" datatype="real" value="%null%" />
+                </default-value>
+              </lookupExp>
+            </funcallExp>
+          </funcallExp>
+        </binding>
+      </measures>
+      <groupbys>
+        <binding name="[PROD_TYPE1]">
+          <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+        </binding>
+        <binding name="[SHIP_MODE]">
+          <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+        </binding>
+      </groupbys>
+      <projectOp class="logical-operator">
+        <expressions>
+          <binding name="[PROD_TYPE1]">
+            <identifierExp class="logical-expression" identifier="[PROD_TYPE1]" />
+          </binding>
+          <binding name="[SHIP_MODE]">
+            <identifierExp class="logical-expression" identifier="[SHIP_MODE]" />
+          </binding>
+        </expressions>
+        <relationOp class="logical-operator" connection="leaf" name="[TESTV1].[TESTV1_STAPLES]">
+          <relation name="Staples" table="[TESTV1].[TESTV1_STAPLES]" type="table" />
+          <cols>
+          </cols>
+          <type>
+            <schema>
+              <field name="[CALL_CENTER_REGION]">
+                <type name="top" />
+              </field>
+              <field name="[CUSTOMER_BALANCE]">
+                <type name="top" />
+              </field>
+              <field name="[CUSTOMER_NAME]">
+                <type name="top" />
+              </field>
+              <field name="[CUSTOMER_SEGMENT]">
+                <type name="top" />
+              </field>
+              <field name="[CUSTOMER_STATE]">
+                <type name="top" />
+              </field>
+              <field name="[DISCOUNT]">
+                <type name="top" />
+              </field>
+              <field name="[EMPLOYEE_DEPT]">
+                <type name="top" />
+              </field>
+              <field name="[EMPLOYEE_NAME]">
+                <type name="top" />
+              </field>
+              <field name="[EMPLOYEE_SALARY]">
+                <type name="top" />
+              </field>
+              <field name="[EMPLOYEE_YRS_EXP]">
+                <type name="top" />
+              </field>
+              <field name="[FILL_TIME]">
+                <type name="top" />
+              </field>
+              <field name="[GROSS_PROFIT]">
+                <type name="top" />
+              </field>
+              <field name="[ITEM_COUNT]">
+                <type name="top" />
+              </field>
+              <field name="[MANAGER_NAME]">
+                <type name="top" />
+              </field>
+              <field name="[MARKET_SEGMENT]">
+                <type name="top" />
+              </field>
+              <field name="[ORDER_DATE_]">
+                <type name="top" />
+              </field>
+              <field name="[ORDER_DAY]">
+                <type name="top" />
+              </field>
+              <field name="[ORDER_ID]">
+                <type name="top" />
+              </field>
+              <field name="[ORDER_MONTH]">
+                <type name="top" />
+              </field>
+              <field name="[ORDER_PRIORITY]">
+                <type name="top" />
+              </field>
+              <field name="[ORDER_QUANTITY]">
+                <type name="top" />
+              </field>
+              <field name="[ORDER_QUARTER]">
+                <type name="top" />
+              </field>
+              <field name="[ORDER_STATUS]">
+                <type name="top" />
+              </field>
+              <field name="[ORDER_YEAR]">
+                <type name="top" />
+              </field>
+              <field name="[PID]">
+                <type name="top" />
+              </field>
+              <field name="[PRICE]">
+                <type name="top" />
+              </field>
+              <field name="[PROD_TYPE1]">
+                <type name="top" />
+              </field>
+              <field name="[PROD_TYPE2]">
+                <type name="top" />
+              </field>
+              <field name="[PROD_TYPE3]">
+                <type name="top" />
+              </field>
+              <field name="[PROD_TYPE4]">
+                <type name="top" />
+              </field>
+              <field name="[PRODUCT_BASE_MARGIN]">
+                <type name="top" />
+              </field>
+              <field name="[PRODUCT_CONTAINER]">
+                <type name="top" />
+              </field>
+              <field name="[PRODUCT_ID]">
+                <type name="top" />
+              </field>
+              <field name="[PRODUCT_IN_STOCK]">
+                <type name="top" />
+              </field>
+              <field name="[PRODUCT_NAME]">
+                <type name="top" />
+              </field>
+              <field name="[RECEIVE_TIME]">
+                <type name="top" />
+              </field>
+              <field name="[RECEIVED_DATE_]">
+                <type name="top" />
+              </field>
+              <field name="[SALES_TOTAL]">
+                <type name="top" />
+              </field>
+              <field name="[SHIP_CHARGE]">
+                <type name="top" />
+              </field>
+              <field name="[SHIP_DATE_]">
+                <type name="top" />
+              </field>
+              <field name="[SHIP_HANDLE_COST]">
+                <type name="top" />
+              </field>
+              <field name="[SHIP_MODE]">
+                <type name="top" />
+              </field>
+              <field name="[SHIP_PRIORITY]">
+                <type name="top" />
+              </field>
+              <field name="[SHIP_PROMO]">
+                <type name="top" />
+              </field>
+              <field name="[SUPPLIER_BALANCE]">
+                <type name="top" />
+              </field>
+              <field name="[SUPPLIER_NAME]">
+                <type name="top" />
+              </field>
+              <field name="[SUPPLIER_REGION]">
+                <type name="top" />
+              </field>
+              <field name="[SUPPLIER_STATE]">
+                <type name="top" />
+              </field>
+              <field name="[TAX_RATE]">
+                <type name="top" />
+              </field>
+              <field name="[TOTAL_CYCLE_TIME]">
+                <type name="top" />
+              </field>
+            </schema>
+            <schema>
+            </schema>
+          </type>
+        </relationOp>
+      </projectOp>
+    </aggregateOp>
+  </projectOp>
+</logical-query>
