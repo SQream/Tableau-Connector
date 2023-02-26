@@ -13,9 +13,9 @@ This is the connector used by Tableau for connecting with SQream JDBC or ODBC.
 - Install the packaging module in the virtual environment  
 `python setup.py install`  
 - Package connector  
-`python -m connector_packager.package [path_to_plugin_folder]`  
+`python -m connector_packager.package [path_to_plugin_folder] --force-package -d [path_to_output_taco_file]`  
 - Sign .taco package  
-`jarsigner -keystore [path_to_key_store] [path_to_taco_package] SQreamDB`
+`jarsigner -keystore [path_to_key_store] [path_to_taco_package] SQreamDB -tsa http://timestamp.digicert.com`
 
 ## Using connector during developement
 - Run Tableau under development connector (not packaged)
